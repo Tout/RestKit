@@ -1,15 +1,15 @@
 //
-//  RKParamsExample.h
-//  RKCatalog
+//  ORKParamsExample.h
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKCatalog.h"
+#import "ORKCatalog.h"
 
-@interface RKParamsExample : UIViewController <RKRequestDelegate> {
-    RKClient *_client;
+@interface ORKParamsExample : UIViewController <ORKRequestDelegate> {
+    ORKClient *_client;
     UIProgressView *_progressView;
     UIActivityIndicatorView *_activityIndicatorView;
     UIImageView *_imageView;

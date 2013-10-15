@@ -1,12 +1,12 @@
 //
-//  RKTUser.h
-//  RKTwitter
+//  ORKTUser.h
+//  ORKTwitter
 //
 //  Created by Blake Watters on 9/5/10.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-@interface RKTUser : NSObject {
+@interface ORKTUser : NSObject {
     NSNumber *_userID;
     NSString *_name;
     NSString *_screenName;

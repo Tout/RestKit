@@ -1,21 +1,21 @@
 //
-//  RKTStatus.h
-//  RKTwitter
+//  ORKTStatus.h
+//  ORKTwitter
 //
 //  Created by Blake Watters on 9/5/10.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKTUser.h"
+#import "ORKTUser.h"
 
-@interface RKTStatus : NSObject {
+@interface ORKTStatus : NSObject {
     NSNumber *_statusID;
     NSDate *_createdAt;
     NSString *_text;
     NSString *_urlString;
     NSString *_inReplyToScreenName;
     NSNumber *_isFavorited;
-    RKTUser *_user;
+    ORKTUser *_user;
 }
 
 /**
@@ -51,6 +51,6 @@
 /**
  * The User who posted this status
  */
-@property (nonatomic, retain) RKTUser *user;
+@property (nonatomic, retain) ORKTUser *user;
 
 @end

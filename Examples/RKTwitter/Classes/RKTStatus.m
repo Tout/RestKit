@@ -1,14 +1,14 @@
 //
-//  RKTStatus.m
-//  RKTwitter
+//  ORKTStatus.m
+//  ORKTwitter
 //
 //  Created by Blake Watters on 9/5/10.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKTStatus.h"
+#import "ORKTStatus.h"
 
-@implementation RKTStatus
+@implementation ORKTStatus
 
 @synthesize statusID = _statusID;
 @synthesize createdAt = _createdAt;

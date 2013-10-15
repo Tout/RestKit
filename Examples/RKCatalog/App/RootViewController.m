@@ -1,6 +1,6 @@
 //
 //  RootViewController.m
-//  RKCatalog
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
@@ -16,14 +16,14 @@
     [super viewDidLoad];
 
     _exampleTableItems = [[NSArray alloc] initWithObjects:
-                          @"RKAuthenticationExample",
-                          @"RKParamsExample",
-                          @"RKRequestQueueExample",
-                          @"RKReachabilityExample",
-                          @"RKBackgroundRequestExample",
-                          @"RKKeyValueMappingExample",
-                          @"RKRelationshipMappingExample",
-                          @"RKCoreDataExample",
+                          @"ORKAuthenticationExample",
+                          @"ORKParamsExample",
+                          @"ORKRequestQueueExample",
+                          @"ORKReachabilityExample",
+                          @"ORKBackgroundRequestExample",
+                          @"ORKKeyValueMappingExample",
+                          @"ORKRelationshipMappingExample",
+                          @"ORKCoreDataExample",
                           nil];
 }
 
@@ -46,7 +46,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"RKCatalogCellIdentifier";
+    static NSString *cellIdentifier = @"ORKCatalogCellIdentifier";
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
@@ -64,8 +64,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Clear the singleton instances to isolate the examples
-    [RKClient setSharedClient:nil];
-    [RKObjectManager setSharedManager:nil];
+    [ORKClient setSharedClient:nil];
+    [ORKObjectManager setSharedManager:nil];
 
     NSString *exampleName = [_exampleTableItems objectAtIndex:indexPath.row];
     Class exampleClass = NSClassFromString(exampleName);

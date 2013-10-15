@@ -1,14 +1,14 @@
 //
-//  RKBackgroundRequestExample.h
-//  RKCatalog
+//  ORKBackgroundRequestExample.h
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKCatalog.h"
+#import "ORKCatalog.h"
 
-@interface RKBackgroundRequestExample : UIViewController <RKRequestDelegate> {
+@interface ORKBackgroundRequestExample : UIViewController <ORKRequestDelegate> {
     UIButton *_sendButton;
     UISegmentedControl *_segmentedControl;
     UILabel *_statusLabel;

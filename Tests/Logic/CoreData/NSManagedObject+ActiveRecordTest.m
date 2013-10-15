@@ -6,9 +6,9 @@
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKTestEnvironment.h"
-#import "NSEntityDescription+RKAdditions.h"
-#import "RKHuman.h"
+#import "ORKTestEnvironment.h"
+#import "NSEntityDescription+ORKAdditions.h"
+#import "ORKHuman.h"
 
 @interface NSManagedObject_ActiveRecordTest : SenTestCase
 
@@ -18,47 +18,47 @@
 
 - (void)testFindByPrimaryKey
 {
-    RKManagedObjectStore *store = [RKTestFactory managedObjectStore];
-    NSEntityDescription *entity = [RKHuman entityDescription];
+    ORKManagedObjectStore *store = [ORKTestFactory managedObjectStore];
+    NSEntityDescription *entity = [ORKHuman entityDescription];
     entity.primaryKeyAttributeName = @"railsID";
 
-    RKHuman *human = [RKHuman createEntity];
+    ORKHuman *human = [ORKHuman createEntity];
     human.railsID = [NSNumber numberWithInt:12345];
     [store save:nil];
 
-    RKHuman *foundHuman = [RKHuman findByPrimaryKey:[NSNumber numberWithInt:12345] inContext:store.primaryManagedObjectContext];
+    ORKHuman *foundHuman = [ORKHuman findByPrimaryKey:[NSNumber numberWithInt:12345] inContext:store.primaryManagedObjectContext];
     assertThat(foundHuman, is(equalTo(human)));
 }
 
 - (void)testFindByPrimaryKeyInContext
 {
-    RKManagedObjectStore *store = [RKTestFactory managedObjectStore];
-    NSManagedObjectContext *context = [[RKTestFactory managedObjectStore] newManagedObjectContext];
-    NSEntityDescription *entity = [RKHuman entityDescription];
+    ORKManagedObjectStore *store = [ORKTestFactory managedObjectStore];
+    NSManagedObjectContext *context = [[ORKTestFactory managedObjectStore] newManagedObjectContext];
+    NSEntityDescription *entity = [ORKHuman entityDescription];
     entity.primaryKeyAttributeName = @"railsID";
 
-    RKHuman *human = [RKHuman createInContext:context];
+    ORKHuman *human = [ORKHuman createInContext:context];
     human.railsID = [NSNumber numberWithInt:12345];
     [context save:nil];
 
-    RKHuman *foundHuman = [RKHuman findByPrimaryKey:[NSNumber numberWithInt:12345] inContext:store.primaryManagedObjectContext];
+    ORKHuman *foundHuman = [ORKHuman findByPrimaryKey:[NSNumber numberWithInt:12345] inContext:store.primaryManagedObjectContext];
     assertThat(foundHuman, is(nilValue()));
 
-    foundHuman = [RKHuman findByPrimaryKey:[NSNumber numberWithInt:12345] inContext:context];
+    foundHuman = [ORKHuman findByPrimaryKey:[NSNumber numberWithInt:12345] inContext:context];
     assertThat(foundHuman, is(equalTo(human)));
 }
 
 - (void)testFindByPrimaryKeyWithStringValueForNumericProperty
 {
-    RKManagedObjectStore *store = [RKTestFactory managedObjectStore];
-    NSEntityDescription *entity = [RKHuman entityDescription];
+    ORKManagedObjectStore *store = [ORKTestFactory managedObjectStore];
+    NSEntityDescription *entity = [ORKHuman entityDescription];
     entity.primaryKeyAttributeName = @"railsID";
 
-    RKHuman *human = [RKHuman createEntity];
+    ORKHuman *human = [ORKHuman createEntity];
     human.railsID = [NSNumber numberWithInt:12345];
     [store save:nil];
 
-    RKHuman *foundHuman = [RKHuman findByPrimaryKey:@"12345" inContext:store.primaryManagedObjectContext];
+    ORKHuman *foundHuman = [ORKHuman findByPrimaryKey:@"12345" inContext:store.primaryManagedObjectContext];
     assertThat(foundHuman, is(equalTo(human)));
 }
 

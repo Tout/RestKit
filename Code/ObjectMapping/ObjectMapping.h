@@ -18,11 +18,11 @@
 //  limitations under the License.
 //
 
-#import "RKObjectManager.h"
-#import "RKObjectLoader.h"
-#import "RKObjectMapping.h"
-#import "RKObjectSerializer.h"
-#import "RKObjectMappingProvider.h"
-#import "RKObjectMappingResult.h"
-#import "RKObjectMapper.h"
-#import "RKParserRegistry.h"
+#import "ORKObjectManager.h"
+#import "ORKObjectLoader.h"
+#import "ORKObjectMapping.h"
+#import "ORKObjectSerializer.h"
+#import "ORKObjectMappingProvider.h"
+#import "ORKObjectMappingResult.h"
+#import "ORKObjectMapper.h"
+#import "ORKParserRegistry.h"

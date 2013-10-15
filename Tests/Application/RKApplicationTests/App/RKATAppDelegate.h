@@ -1,6 +1,6 @@
 //
-//  RKATAppDelegate.h
-//  RKApplicationTests
+//  ORKATAppDelegate.h
+//  ORKApplicationTests
 //
 //  Created by Blake Watters on 2/8/12.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RKATAppDelegate : UIResponder <UIApplicationDelegate>
+@interface ORKATAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

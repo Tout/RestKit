@@ -1,6 +1,6 @@
 //
-//  RKCatalogAppDelegate.h
-//  RKCatalog
+//  ORKCatalogAppDelegate.h
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RKCatalogAppDelegate : NSObject <UIApplicationDelegate> {
+@interface ORKCatalogAppDelegate : NSObject <UIApplicationDelegate> {
 
 }
 

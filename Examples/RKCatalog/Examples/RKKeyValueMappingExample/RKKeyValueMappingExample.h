@@ -1,14 +1,14 @@
 //
-//  RKKeyValueMappingExample.h
-//  RKCatalog
+//  ORKKeyValueMappingExample.h
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKCatalog.h"
+#import "ORKCatalog.h"
 
-@interface RKKeyValueMappingExample : UIViewController <RKObjectLoaderDelegate> {
+@interface ORKKeyValueMappingExample : UIViewController <ORKObjectLoaderDelegate> {
     UILabel *_infoLabel;
 }
 

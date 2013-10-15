@@ -6,8 +6,8 @@
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKTestFixture.h"
-#import "RKTestNotificationObserver.h"
-#import "RKTestResponseLoader.h"
-#import "RKTestFactory.h"
-#import "RKMappingTest.h"
+#import "ORKTestFixture.h"
+#import "ORKTestNotificationObserver.h"
+#import "ORKTestResponseLoader.h"
+#import "ORKTestFactory.h"
+#import "ORKMappingTest.h"

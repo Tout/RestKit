@@ -1,13 +1,13 @@
 //
-//  RKKeyValueMappingExample.m
-//  RKCatalog
+//  ORKKeyValueMappingExample.m
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
 #import <RestKit/RestKit.h>
-#import "RKKeyValueMappingExample.h"
+#import "ORKKeyValueMappingExample.h"
 
 /**
  This code is excerpted from the Advanced Tutorial. See Docs/ for explanation
@@ -44,7 +44,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 
-@implementation RKKeyValueMappingExample
+@implementation ORKKeyValueMappingExample
 
 @synthesize infoLabel = _infoLabel;
 
@@ -52,7 +52,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [RKObjectManager managerWithBaseURL:gRKCatalogBaseURL];
+        [ORKObjectManager managerWithBaseURL:gORKCatalogBaseURL];
     }
 
     return self;
@@ -62,7 +62,7 @@
 {
     [super viewDidAppear:animated];
 
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[SimpleAccount class]];
+    ORKObjectMapping *mapping = [ORKObjectMapping mappingForClass:[SimpleAccount class]];
     [mapping mapKeyPathsToAttributes:
      @"id", @"accountID",
      @"name", @"name",
@@ -72,11 +72,11 @@
      @"transactions.@distinctUnionOfObjects.payee", @"distinctPayees",
      nil];
 
-    [[RKObjectManager sharedManager].mappingProvider setObjectMapping:mapping forResourcePathPattern:@"/RKKeyValueMappingExample"];
-    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/RKKeyValueMappingExample" delegate:self];
+    [[ORKObjectManager sharedManager].mappingProvider setObjectMapping:mapping forResourcePathPattern:@"/ORKKeyValueMappingExample"];
+    [[ORKObjectManager sharedManager] loadObjectsAtResourcePath:@"/ORKKeyValueMappingExample" delegate:self];
 }
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+- (void)objectLoader:(ORKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
 {
     SimpleAccount *account = [objects objectAtIndex:0];
 
@@ -90,7 +90,7 @@
     _infoLabel.text = info;
 }
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+- (void)objectLoader:(ORKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
     _infoLabel.text = [NSString stringWithFormat:@"Error: %@", [error localizedDescription]];
     _infoLabel.textColor = [UIColor redColor];

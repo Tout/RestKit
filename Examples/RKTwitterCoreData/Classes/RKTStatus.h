@@ -1,6 +1,6 @@
 //
-//  RKTStatus.h
-//  RKTwitter
+//  ORKTStatus.h
+//  ORKTwitter
 //
 //  Created by Blake Watters on 9/5/10.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
@@ -9,7 +9,7 @@
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData.h>
 
-@interface RKTStatus : NSManagedObject {
+@interface ORKTStatus : NSManagedObject {
 }
 
 /**

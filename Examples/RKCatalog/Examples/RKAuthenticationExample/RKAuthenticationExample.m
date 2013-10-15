@@ -1,14 +1,14 @@
 //
-//  RKAuthenticationExample.m
-//  RKCatalog
+//  ORKAuthenticationExample.m
+//  ORKCatalog
 //
 //  Created by Blake Watters on 9/27/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKAuthenticationExample.h"
+#import "ORKAuthenticationExample.h"
 
-@implementation RKAuthenticationExample
+@implementation ORKAuthenticationExample
 
 @synthesize authenticatedRequest;
 @synthesize URLTextField;
@@ -20,8 +20,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        RKClient *client = [RKClient clientWithBaseURL:gRKCatalogBaseURL];
-        [RKClient setSharedClient:client];
+        ORKClient *client = [ORKClient clientWithBaseURL:gORKCatalogBaseURL];
+        [ORKClient setSharedClient:client];
     }
     return self;
 }
@@ -36,31 +36,31 @@
 }
 
 /**
- We are constructing our own RKRequest here rather than working with the client.
- It is important to remember that RKClient is really just a factory object for instances
- of RKRequest. At any time you can directly configure an RKRequest instead.
+ We are constructing our own ORKRequest here rather than working with the client.
+ It is important to remember that ORKClient is really just a factory object for instances
+ of ORKRequest. At any time you can directly configure an ORKRequest instead.
  */
 - (void)sendRequest
 {
     NSURL *URL = [NSURL URLWithString:[URLTextField text]];
-    RKRequest *newRequest = [RKRequest requestWithURL:URL];
+    ORKRequest *newRequest = [ORKRequest requestWithURL:URL];
     newRequest.delegate = self;
-    newRequest.authenticationType = RKRequestAuthenticationTypeHTTP;
+    newRequest.authenticationType = ORKRequestAuthenticationTypeHTTP;
     newRequest.username = [usernameTextField text];
     newRequest.password = [passwordTextField text];
 
     self.authenticatedRequest = newRequest;
 }
 
-- (void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error
+- (void)request:(ORKRequest *)request didFailLoadWithError:(NSError *)error
 {
-    RKLogError(@"Load of RKRequest %@ failed with error: %@", request, error);
+    ORKLogError(@"Load of ORKRequest %@ failed with error: %@", request, error);
     [request release];
 }
 
-- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
+- (void)request:(ORKRequest *)request didLoadResponse:(ORKResponse *)response
 {
-    RKLogCritical(@"Loading of RKRequest %@ completed with status code %d. Response body: %@", request, response.statusCode, [response bodyAsString]);
+    ORKLogCritical(@"Loading of ORKRequest %@ completed with status code %d. Response body: %@", request, response.statusCode, [response bodyAsString]);
     [request release];
 }
 

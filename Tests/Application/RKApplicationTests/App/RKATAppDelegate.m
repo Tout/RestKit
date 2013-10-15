@@ -1,14 +1,14 @@
 //
-//  RKATAppDelegate.m
-//  RKApplicationTests
+//  ORKATAppDelegate.m
+//  ORKApplicationTests
 //
 //  Created by Blake Watters on 2/8/12.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKATAppDelegate.h"
+#import "ORKATAppDelegate.h"
 
-@implementation RKATAppDelegate
+@implementation ORKATAppDelegate
 
 @synthesize window = _window;
 @synthesize managedObjectContext = __managedObjectContext;
@@ -125,7 +125,7 @@
     {
         return __managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"RKApplicationTests" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ORKApplicationTests" withExtension:@"momd"];
     __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return __managedObjectModel;
 }
@@ -141,7 +141,7 @@
         return __persistentStoreCoordinator;
     }
 
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"RKApplicationTests.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ORKApplicationTests.sqlite"];
 
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

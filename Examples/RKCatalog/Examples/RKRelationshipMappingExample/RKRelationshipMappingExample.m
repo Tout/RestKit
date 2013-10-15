@@ -1,6 +1,6 @@
 //
-//  RKRelationshipMappingExample.m
-//  RKCatalog
+//  ORKRelationshipMappingExample.m
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
@@ -8,29 +8,29 @@
 
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData.h>
-#import "RKRelationshipMappingExample.h"
+#import "ORKRelationshipMappingExample.h"
 #import "User.h"
 #import "Project.h"
 #import "Task.h"
 
-@implementation RKRelationshipMappingExample
+@implementation ORKRelationshipMappingExample
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:gRKCatalogBaseURL];
-        RKManagedObjectStore *objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"RKRelationshipMappingExample.sqlite"];
+        ORKObjectManager *objectManager = [ORKObjectManager managerWithBaseURL:gORKCatalogBaseURL];
+        ORKManagedObjectStore *objectStore = [ORKManagedObjectStore objectStoreWithStoreFilename:@"ORKRelationshipMappingExample.sqlite"];
         objectManager.objectStore = objectStore;
 
-        RKManagedObjectMapping *taskMapping = [RKManagedObjectMapping mappingForClass:[Task class] inManagedObjectStore:objectStore];
+        ORKManagedObjectMapping *taskMapping = [ORKManagedObjectMapping mappingForClass:[Task class] inManagedObjectStore:objectStore];
         taskMapping.primaryKeyAttribute = @"taskID";
         [taskMapping mapKeyPath:@"id" toAttribute:@"taskID"];
         [taskMapping mapKeyPath:@"name" toAttribute:@"name"];
         [taskMapping mapKeyPath:@"assigned_user_id" toAttribute:@"assignedUserID"];
         [objectManager.mappingProvider setMapping:taskMapping forKeyPath:@"task"];
 
-        RKManagedObjectMapping *userMapping = [RKManagedObjectMapping mappingForClass:[User class] inManagedObjectStore:objectStore];
+        ORKManagedObjectMapping *userMapping = [ORKManagedObjectMapping mappingForClass:[User class] inManagedObjectStore:objectStore];
         userMapping.primaryKeyAttribute = @"userID";
         [userMapping mapAttributes:@"name", @"email", nil];
         [userMapping mapKeyPath:@"id" toAttribute:@"userID"];
@@ -42,7 +42,7 @@
         [taskMapping connectRelationship:@"assignedUser" withObjectForPrimaryKeyAttribute:@"assignedUserID"];
 
         // NOTE - Project is not backed by Core Data
-        RKObjectMapping *projectMapping = [RKObjectMapping mappingForClass:[Project class]];
+        ORKObjectMapping *projectMapping = [ORKObjectMapping mappingForClass:[Project class]];
         [projectMapping mapKeyPath:@"id" toAttribute:@"projectID"];
         [projectMapping mapAttributes:@"name", @"description", nil];
         [projectMapping mapRelationship:@"user" withMapping:userMapping];
@@ -65,16 +65,16 @@
 
     self.title = @"Task List";
 
-    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/RKRelationshipMappingExample" delegate:self];
+    [[ORKObjectManager sharedManager] loadObjectsAtResourcePath:@"/ORKRelationshipMappingExample" delegate:self];
 }
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+- (void)objectLoader:(ORKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
 {
     _objects = [objects retain];
     [self.tableView reloadData];
 }
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+- (void)objectLoader:(ORKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"Rats!" otherButtonTitles:nil];
     [alert show];
@@ -157,7 +157,7 @@
     } else if (indexPath.section == 1) {
         // NOTE: We refetch the object here because Project is not Core Data backed
         NSManagedObject *objectReference = [_selectedProject.tasks objectAtIndex:indexPath.row];
-        Task *task = (Task *)[[RKObjectManager sharedManager].objectStore objectWithID:[objectReference objectID]];
+        Task *task = (Task *)[[ORKObjectManager sharedManager].objectStore objectWithID:[objectReference objectID]];
         cell.textLabel.text = [NSString stringWithFormat:@"%@", task.name];
         cell.detailTextLabel.text = [NSString stringWithFormat:@"Assigned to: %@", task.assignedUser.name];
     }

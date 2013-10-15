@@ -1,17 +1,17 @@
 //
-//  RKCatalogAppDelegate.m
-//  RKCatalog
+//  ORKCatalogAppDelegate.m
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKCatalogAppDelegate.h"
+#import "ORKCatalogAppDelegate.h"
 #import "RootViewController.h"
 
-NSURL *gRKCatalogBaseURL = nil;
+NSURL *gORKCatalogBaseURL = nil;
 
-@implementation RKCatalogAppDelegate
+@implementation ORKCatalogAppDelegate
 
 @synthesize window;
 @synthesize navigationController;
@@ -24,7 +24,7 @@ NSURL *gRKCatalogBaseURL = nil;
     [self.window makeKeyAndVisible];
 
 
-    gRKCatalogBaseURL = [[NSURL alloc] initWithString:@"http://rkcatalog.heroku.com"];
+    gORKCatalogBaseURL = [[NSURL alloc] initWithString:@"http://rkcatalog.heroku.com"];
 
     return YES;
 }

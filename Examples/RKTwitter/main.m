@@ -1,6 +1,6 @@
 //
 //  main.m
-//  RKTwitter
+//  ORKTwitter
 //
 //  Created by Blake Watters on 9/5/10.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
@@ -11,7 +11,7 @@
 int main(int argc, char *argv[]) {
 
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, @"RKTwitterAppDelegate");
+    int retVal = UIApplicationMain(argc, argv, nil, @"ORKTwitterAppDelegate");
     [pool release];
     return retVal;
 }

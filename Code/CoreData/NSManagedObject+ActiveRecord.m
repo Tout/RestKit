@@ -10,21 +10,21 @@
 
 #import <objc/runtime.h>
 #import "NSManagedObject+ActiveRecord.h"
-#import "RKManagedObjectStore.h"
-#import "RKLog.h"
-#import "RKFixCategoryBug.h"
-#import "NSEntityDescription+RKAdditions.h"
+#import "ORKManagedObjectStore.h"
+#import "ORKLog.h"
+#import "ORKFixCategoryBug.h"
+#import "NSEntityDescription+ORKAdditions.h"
 
 // Set Logging Component
-#undef RKLogComponent
-#define RKLogComponent lcl_cRestKitCoreData
+#undef ORKLogComponent
+#define ORKLogComponent lcl_cRestKitCoreData
 
 static NSUInteger const kActiveRecordDefaultBatchSize = 10;
 static NSNumber *defaultBatchSize = nil;
 
 static NSManagedObjectContext *defaultContext = nil;
 
-RK_FIX_CATEGORY_BUG(NSManagedObjectContext_ActiveRecord)
+ORK_FIX_CATEGORY_BUG(NSManagedObjectContext_ActiveRecord)
 
 @implementation NSManagedObjectContext (ActiveRecord)
 
@@ -42,17 +42,17 @@ RK_FIX_CATEGORY_BUG(NSManagedObjectContext_ActiveRecord)
 
 + (NSManagedObjectContext *)contextForCurrentThread
 {
-    NSAssert([RKManagedObjectStore defaultObjectStore], @"[RKManagedObjectStore defaultObjectStore] cannot be nil");
-    return [[RKManagedObjectStore defaultObjectStore] managedObjectContextForCurrentThread];
+    NSAssert([ORKManagedObjectStore defaultObjectStore], @"[ORKManagedObjectStore defaultObjectStore] cannot be nil");
+    return [[ORKManagedObjectStore defaultObjectStore] managedObjectContextForCurrentThread];
 }
 
 @end
 
-RK_FIX_CATEGORY_BUG(NSManagedObject_ActiveRecord)
+ORK_FIX_CATEGORY_BUG(NSManagedObject_ActiveRecord)
 
 @implementation NSManagedObject (ActiveRecord)
 
-#pragma mark - RKManagedObject methods
+#pragma mark - ORKManagedObject methods
 
 + (NSEntityDescription *)entity
 {
@@ -73,7 +73,7 @@ RK_FIX_CATEGORY_BUG(NSManagedObject_ActiveRecord)
     NSError *error = nil;
     NSArray *objects = [[NSManagedObjectContext contextForCurrentThread] executeFetchRequest:fetchRequest error:&error];
     if (objects == nil) {
-        RKLogError(@"Error: %@", [error localizedDescription]);
+        ORKLogError(@"Error: %@", [error localizedDescription]);
     }
     return objects;
 }
@@ -83,7 +83,7 @@ RK_FIX_CATEGORY_BUG(NSManagedObject_ActiveRecord)
     NSError *error = nil;
     NSUInteger objectCount = [[NSManagedObjectContext contextForCurrentThread] countForFetchRequest:fetchRequest error:&error];
     if (objectCount    == NSNotFound) {
-        RKLogError(@"Error: %@", [error localizedDescription]);
+        ORKLogError(@"Error: %@", [error localizedDescription]);
     }
     return objectCount;
 }
@@ -157,7 +157,7 @@ RK_FIX_CATEGORY_BUG(NSManagedObject_ActiveRecord)
 {
     NSPredicate *predicate = [[self entityDescriptionInContext:context] predicateForPrimaryKeyAttributeWithValue:primaryKeyValue];
     if (! predicate) {
-        RKLogWarning(@"Attempt to findByPrimaryKey for entity with nil primaryKeyAttribute. Set the primaryKeyAttributeName and try again! %@", self);
+        ORKLogWarning(@"Attempt to findByPrimaryKey for entity with nil primaryKeyAttribute. Set the primaryKeyAttributeName and try again! %@", self);
         return nil;
     }
 
@@ -206,21 +206,21 @@ RK_FIX_CATEGORY_BUG(NSManagedObject_ActiveRecord)
                 {
                     if ([e respondsToSelector:@selector(userInfo)])
                     {
-                        RKLogError(@"Error Details: %@", [e userInfo]);
+                        ORKLogError(@"Error Details: %@", [e userInfo]);
                     }
                     else
                     {
-                        RKLogError(@"Error Details: %@", e);
+                        ORKLogError(@"Error Details: %@", e);
                     }
                 }
             }
             else
             {
-                RKLogError(@"Error: %@", detailedError);
+                ORKLogError(@"Error: %@", detailedError);
             }
         }
-        RKLogError(@"Error Domain: %@", [error domain]);
-        RKLogError(@"Recovery Suggestion: %@", [error localizedRecoverySuggestion]);
+        ORKLogError(@"Error Domain: %@", [error domain]);
+        ORKLogError(@"Recovery Suggestion: %@", [error localizedRecoverySuggestion]);
     }
 }
 
@@ -295,7 +295,7 @@ RK_FIX_CATEGORY_BUG(NSManagedObject_ActiveRecord)
             }
             else
             {
-                RKLogError(@"Property '%@' not found in %d properties for %@", propertyName, [propDict count], NSStringFromClass(self));
+                ORKLogError(@"Property '%@' not found in %d properties for %@", propertyName, [propDict count], NSStringFromClass(self));
             }
         }
     }

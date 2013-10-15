@@ -1,15 +1,15 @@
 //
-//  RKReachabilityExample.m
-//  RKCatalog
+//  ORKReachabilityExample.m
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
 #import <RestKit/RestKit.h>
-#import "RKReachabilityExample.h"
+#import "ORKReachabilityExample.h"
 
-@implementation RKReachabilityExample
+@implementation ORKReachabilityExample
 
 @synthesize observer = _observer;
 @synthesize statusLabel = _statusLabel;
@@ -19,14 +19,14 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-       self.observer = [[RKReachabilityObserver alloc] initWithHost:@"restkit.org"];
-//        self.observer = [RKReachabilityObserver reachabilityObserverForLocalWifi];
-//        self.observer = [RKReachabilityObserver reachabilityObserverForInternet];
+       self.observer = [[ORKReachabilityObserver alloc] initWithHost:@"restkit.org"];
+//        self.observer = [ORKReachabilityObserver reachabilityObserverForLocalWifi];
+//        self.observer = [ORKReachabilityObserver reachabilityObserverForInternet];
 
         // Register for notifications
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(reachabilityChanged:)
-                                                     name:RKReachabilityDidChangeNotification
+                                                     name:ORKReachabilityDidChangeNotification
                                                    object:_observer];
     }
 
@@ -50,9 +50,9 @@
 
 - (void)reachabilityChanged:(NSNotification *)notification
 {
-    RKReachabilityObserver *observer = (RKReachabilityObserver *)[notification object];
+    ORKReachabilityObserver *observer = (ORKReachabilityObserver *)[notification object];
 
-    RKLogCritical(@"Received reachability update: %@", observer);
+    ORKLogCritical(@"Received reachability update: %@", observer);
     _flagsLabel.text = [NSString stringWithFormat:@"Host: %@ -> %@", observer.host, [observer reachabilityFlagsDescription]];
 
     if ([observer isNetworkReachable]) {
@@ -64,9 +64,9 @@
 
         _statusLabel.textColor = [UIColor greenColor];
 
-        if (RKReachabilityReachableViaWiFi == [observer networkStatus]) {
+        if (ORKReachabilityReachableViaWiFi == [observer networkStatus]) {
             _statusLabel.text = @"Online via WiFi";
-        } else if (RKReachabilityReachableViaWWAN == [observer networkStatus]) {
+        } else if (ORKReachabilityReachableViaWWAN == [observer networkStatus]) {
             _statusLabel.text = @"Online via 3G or Edge";
         }
     } else {

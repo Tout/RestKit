@@ -18,11 +18,11 @@
 //  limitations under the License.
 //
 
-#import "RKTestEnvironment.h"
-#import "NSString+RKAdditions.h"
-#import "RKObjectMapperTestModel.h"
+#import "ORKTestEnvironment.h"
+#import "NSString+ORKAdditions.h"
+#import "ORKObjectMapperTestModel.h"
 
-@interface NSStringRestKitTest : RKTestCase
+@interface NSStringRestKitTest : ORKTestCase
 
 @end
 
@@ -45,7 +45,7 @@
 
 - (void)testShouldInterpolateObjects
 {
-    RKObjectMapperTestModel *person = [[[RKObjectMapperTestModel alloc] init] autorelease];
+    ORKObjectMapperTestModel *person = [[[ORKObjectMapperTestModel alloc] init] autorelease];
     person.name = @"CuddleGuts";
     person.age  = [NSNumber numberWithInt:6];
     NSString *interpolatedPath = [@"/people/:name/:age" interpolateWithObject:person];
@@ -56,7 +56,7 @@
 
 - (void)testShouldInterpolateObjectsWithDeprecatedParentheses
 {
-    RKObjectMapperTestModel *person = [[[RKObjectMapperTestModel alloc] init] autorelease];
+    ORKObjectMapperTestModel *person = [[[ORKObjectMapperTestModel alloc] init] autorelease];
     person.name = @"CuddleGuts";
     person.age  = [NSNumber numberWithInt:6];
     NSString *interpolatedPath = [@"/people/(name)/(age)" interpolateWithObject:person];

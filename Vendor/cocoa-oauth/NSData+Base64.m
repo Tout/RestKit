@@ -22,9 +22,9 @@
 //
 
 #import "NSData+Base64.h"
-#import "RKFixCategoryBug.h"
+#import "ORKFixCategoryBug.h"
 
-RK_FIX_CATEGORY_BUG(NSData_Base64)
+ORK_FIX_CATEGORY_BUG(NSData_Base64)
 
 //
 // Mapping from 6 bit pattern to ASCII character.

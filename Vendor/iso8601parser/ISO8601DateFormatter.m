@@ -6,11 +6,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ISO8601DateFormatter.h"
-#import "RKLog.h"
+#import "ORKLog.h"
 
 // Set Logging Component
-#undef RKLogComponent
-#define RKLogComponent lcl_cRestKitSupport
+#undef ORKLogComponent
+#define ORKLogComponent lcl_cRestKitSupport
 
 #ifndef DEFAULT_TIME_SEPARATOR
 #	define DEFAULT_TIME_SEPARATOR ':'
@@ -369,7 +369,7 @@ static BOOL is_leap_year(NSUInteger year);
 								} else {
 									//Get month and/or date.
 									segment = read_segment_4digits(ch, &ch, &num_digits);
-									RKLogTrace(@"(%@) parsing month; segment is %lu and ch is %s", string, (unsigned long)segment, ch);
+									ORKLogTrace(@"(%@) parsing month; segment is %lu and ch is %s", string, (unsigned long)segment, ch);
 									switch(num_digits) {
 										case 4: //YY-MMDD
 											day = segment % 100U;
@@ -426,7 +426,7 @@ static BOOL is_leap_year(NSUInteger year);
 							break;
                             
 						case 1:; //-YY; -YY-MM (implicit century)
-							RKLogTrace(@"(%@) found %lu digits and one hyphen, so this is either -YY or -YY-MM; segment (year) is %lu", string, (unsigned long)num_digits, (unsigned long)segment);
+							ORKLogTrace(@"(%@) found %lu digits and one hyphen, so this is either -YY or -YY-MM; segment (year) is %lu", string, (unsigned long)num_digits, (unsigned long)segment);
 							NSUInteger current_year = nowComponents.year;
 							NSUInteger current_century = (current_year % 100U);
 							year = segment + (current_year - current_century);
@@ -436,7 +436,7 @@ static BOOL is_leap_year(NSUInteger year);
 							if (*ch == '-') {
 								++ch;
 								month_or_week = read_segment_2digits(ch, &ch);
-								RKLogTrace(@"(%@) month is %lu", string, (unsigned long)month_or_week);
+								ORKLogTrace(@"(%@) month is %lu", string, (unsigned long)month_or_week);
 							}
                             
 							day = 1U;
@@ -629,7 +629,7 @@ static BOOL is_leap_year(NSUInteger year);
 		*outTimeZone = timeZone;
 	parsingCalendar.timeZone = timeZone;
     
-    RKLogDebug(@"TIMEZONE: %@", timeZone);
+    ORKLogDebug(@"TIMEZONE: %@", timeZone);
     
 	return [parsingCalendar dateFromComponents:components];
 }

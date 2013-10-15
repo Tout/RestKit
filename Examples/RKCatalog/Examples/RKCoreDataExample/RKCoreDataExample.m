@@ -1,13 +1,13 @@
 //
-//  RKCoreDataExample.m
-//  RKCatalog
+//  ORKCoreDataExample.m
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
 #import <RestKit/CoreData.h>
-#import "RKCoreDataExample.h"
+#import "ORKCoreDataExample.h"
 
 @interface Article : NSManagedObject {
 }
@@ -29,15 +29,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 
-@implementation RKCoreDataExample
+@implementation ORKCoreDataExample
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        RKObjectManager *manager = [RKObjectManager managerWithBaseURLString:@"http://restkit.org"];
-        manager.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"RKCoreDataExample.sqlite"];
-        [RKObjectManager setSharedManager:manager];
+        ORKObjectManager *manager = [ORKObjectManager managerWithBaseURLString:@"http://restkit.org"];
+        manager.objectStore = [ORKManagedObjectStore objectStoreWithStoreFilename:@"ORKCoreDataExample.sqlite"];
+        [ORKObjectManager setSharedManager:manager];
 
         // Create some starter objects if the database is empty
         if ([Article count:nil] == 0) {

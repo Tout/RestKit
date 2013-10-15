@@ -1,25 +1,25 @@
 //
-//  RKTwitterViewController.m
-//  RKTwitter
+//  ORKTwitterViewController.m
+//  ORKTwitter
 //
 //  Created by Blake Watters on 9/5/10.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKTwitterViewController.h"
-#import "RKTStatus.h"
+#import "ORKTwitterViewController.h"
+#import "ORKTStatus.h"
 
-@interface RKTwitterViewController (Private)
+@interface ORKTwitterViewController (Private)
 - (void)loadData;
 @end
 
-@implementation RKTwitterViewController
+@implementation ORKTwitterViewController
 
 - (void)loadTimeline
 {
     // Load the object model via RestKit
-    RKObjectManager *objectManager = [RKObjectManager sharedManager];
-    objectManager.client.baseURL = [RKURL URLWithString:@"http://www.twitter.com"];
+    ORKObjectManager *objectManager = [ORKObjectManager sharedManager];
+    objectManager.client.baseURL = [ORKURL URLWithString:@"http://www.twitter.com"];
     [objectManager loadObjectsAtResourcePath:@"/status/user_timeline/RestKit" delegate:self];
 }
 
@@ -55,14 +55,14 @@
     [super dealloc];
 }
 
-#pragma mark RKObjectLoaderDelegate methods
+#pragma mark ORKObjectLoaderDelegate methods
 
-- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
+- (void)request:(ORKRequest *)request didLoadResponse:(ORKResponse *)response
 {
     NSLog(@"Loaded payload: %@", [response bodyAsString]);
 }
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+- (void)objectLoader:(ORKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
 {
     NSLog(@"Loaded statuses: %@", objects);
     [_statuses release];
@@ -70,7 +70,7 @@
     [_tableView reloadData];
 }
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+- (void)objectLoader:(ORKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
     UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
     [alert show];

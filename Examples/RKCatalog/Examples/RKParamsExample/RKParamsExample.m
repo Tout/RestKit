@@ -1,14 +1,14 @@
 //
-//  RKParamsExample.m
-//  RKCatalog
+//  ORKParamsExample.m
+//  ORKCatalog
 //
 //  Created by Blake Watters on 4/21/11.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKParamsExample.h"
+#import "ORKParamsExample.h"
 
-@implementation RKParamsExample
+@implementation ORKParamsExample
 
 @synthesize progressView = _progressView;
 @synthesize activityIndicatorView = _activityIndicatorView;
@@ -18,19 +18,19 @@
 
 - (void)dealloc
 {
-    [RKClient setSharedClient:nil];
+    [ORKClient setSharedClient:nil];
     [_client release];
     [super dealloc];
 }
 
 - (void)viewDidLoad
 {
-    _client = [[RKClient alloc] initWithBaseURL:gRKCatalogBaseURL];
+    _client = [[ORKClient alloc] initWithBaseURL:gORKCatalogBaseURL];
 }
 
 - (IBAction)uploadButtonWasTouched:(id)sender
 {
-    RKParams *params = [RKParams params];
+    ORKParams *params = [ORKParams params];
 
     // Attach the Image from Image View
     NSLog(@"Got image: %@", [_imageView image]);
@@ -43,25 +43,25 @@
     [params setData:imageData MIMEType:@"image/png" forParam:@"image2"];
 
     // Log info about the serialization
-    NSLog(@"RKParams HTTPHeaderValueForContentType = %@", [params HTTPHeaderValueForContentType]);
-    NSLog(@"RKParams HTTPHeaderValueForContentLength = %d", [params HTTPHeaderValueForContentLength]);
+    NSLog(@"ORKParams HTTPHeaderValueForContentType = %@", [params HTTPHeaderValueForContentType]);
+    NSLog(@"ORKParams HTTPHeaderValueForContentLength = %d", [params HTTPHeaderValueForContentLength]);
 
     // Send it for processing!
-    [_client post:@"/RKParamsExample" params:params delegate:self];
+    [_client post:@"/ORKParamsExample" params:params delegate:self];
 }
 
-- (void)requestDidStartLoad:(RKRequest *)request
+- (void)requestDidStartLoad:(ORKRequest *)request
 {
     _uploadButton.enabled = NO;
     [_activityIndicatorView startAnimating];
 }
 
-- (void)request:(RKRequest *)request didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
+- (void)request:(ORKRequest *)request didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
 {
     _progressView.progress = (totalBytesWritten / totalBytesExpectedToWrite) * 100.0;
 }
 
-- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
+- (void)request:(ORKRequest *)request didLoadResponse:(ORKResponse *)response
 {
     _uploadButton.enabled = YES;
     [_activityIndicatorView stopAnimating];
@@ -75,7 +75,7 @@
     }
 }
 
-- (void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error
+- (void)request:(ORKRequest *)request didFailLoadWithError:(NSError *)error
 {
     _uploadButton.enabled = YES;
     [_activityIndicatorView stopAnimating];

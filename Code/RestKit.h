@@ -28,7 +28,7 @@
  file is generally only imported by apps that
  are pulling in all of RestKit. By setting the
  log component to App here, we allow the app developer
- to use RKLog() in their own app.
+ to use ORKLog() in their own app.
  */
-#undef RKLogComponent
-#define RKLogComponent lcl_cApp
+#undef ORKLogComponent
+#define ORKLogComponent lcl_cApp

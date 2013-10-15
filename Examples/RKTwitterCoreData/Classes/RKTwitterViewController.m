@@ -1,15 +1,15 @@
 //
-//  RKTwitterViewController.m
-//  RKTwitter
+//  ORKTwitterViewController.m
+//  ORKTwitter
 //
 //  Created by Blake Watters on 9/5/10.
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import "RKTwitterViewController.h"
-#import "RKTStatus.h"
+#import "ORKTwitterViewController.h"
+#import "ORKTStatus.h"
 
-@implementation RKTwitterViewController
+@implementation ORKTwitterViewController
 
 - (void)loadView
 {
@@ -47,16 +47,16 @@
 - (void)loadObjectsFromDataStore
 {
     [_statuses release];
-    NSFetchRequest *request = [RKTStatus fetchRequest];
+    NSFetchRequest *request = [ORKTStatus fetchRequest];
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
     [request setSortDescriptors:[NSArray arrayWithObject:descriptor]];
-    _statuses = [[RKTStatus objectsWithFetchRequest:request] retain];
+    _statuses = [[ORKTStatus objectsWithFetchRequest:request] retain];
 }
 
 - (void)loadData
 {
     // Load the object model via RestKit
-    RKObjectManager *objectManager = [RKObjectManager sharedManager];
+    ORKObjectManager *objectManager = [ORKObjectManager sharedManager];
     [objectManager loadObjectsAtResourcePath:@"/status/user_timeline/RestKit" delegate:self];
 }
 
@@ -66,9 +66,9 @@
     [self loadData];
 }
 
-#pragma mark RKObjectLoaderDelegate methods
+#pragma mark ORKObjectLoaderDelegate methods
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+- (void)objectLoader:(ORKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
 {
     [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdatedAt"];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -77,7 +77,7 @@
     [_tableView reloadData];
 }
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+- (void)objectLoader:(ORKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
     UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error"
                                                      message:[error localizedDescription]
@@ -123,7 +123,7 @@
         cell.textLabel.backgroundColor = [UIColor clearColor];
         cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"listbg.png"]];
     }
-    RKTStatus *status = [_statuses objectAtIndex:indexPath.row];
+    ORKTStatus *status = [_statuses objectAtIndex:indexPath.row];
     cell.textLabel.text = status.text;
     return cell;
 }
