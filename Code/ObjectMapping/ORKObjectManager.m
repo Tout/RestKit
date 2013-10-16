@@ -22,7 +22,7 @@
 #import "ORKObjectSerializer.h"
 #import "ORKManagedObjectStore.h"
 #import "ORKManagedObjectLoader.h"
-#import "Support.h"
+#import "OSupport.h"
 
 NSString * const ORKObjectManagerDidBecomeOfflineNotification = @"ORKDidEnterOfflineModeNotification";
 NSString * const ORKObjectManagerDidBecomeOnlineNotification = @"ORKDidEnterOnlineModeNotification";

@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import "Network.h"
+#import "ONetwork.h"
 #import "ORKObjectMapping.h"
 #import "ORKObjectMappingResult.h"
 #import "ORKObjectMappingProvider.h"

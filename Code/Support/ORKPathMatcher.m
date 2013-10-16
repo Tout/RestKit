@@ -19,7 +19,7 @@
 //
 
 #import "ORKPathMatcher.h"
-#import "SOCKit.h"
+#import "ORKSOCKit.h"
 #import "NSString+ORKAdditions.h"
 #import "NSDictionary+ORKAdditions.h"
 #import "ORKLog.h"
@@ -55,7 +55,7 @@ NSString *ORKEncodeURLString(NSString *unencodedString) {
 }
 
 @interface ORKPathMatcher ()
-@property (nonatomic, retain) SOCPattern *socPattern;
+@property (nonatomic, retain) ORKSOCPattern *socPattern;
 @property (nonatomic, copy) NSString *sourcePath;
 @property (nonatomic, copy) NSString *rootPath;
 @property (copy, readwrite) NSDictionary *queryParameters;
@@ -92,7 +92,7 @@ NSString *ORKEncodeURLString(NSString *unencodedString) {
     NSAssert(patternString != NULL, @"Pattern string must not be empty in order to perform pattern matching.");
     patternString = ORKPathPatternFindAndReplaceParensWithColons(patternString);
     ORKPathMatcher *matcher = [[[ORKPathMatcher alloc] init] autorelease];
-    matcher.socPattern = [SOCPattern patternWithString:patternString];
+    matcher.socPattern = [ORKSOCPattern patternWithString:patternString];
     return matcher;
 }
 
@@ -146,7 +146,7 @@ NSString *ORKEncodeURLString(NSString *unencodedString) {
 {
     NSAssert(patternString != NULL, @"Pattern string must not be empty in order to perform patterm matching.");
     patternString = ORKPathPatternFindAndReplaceParensWithColons(patternString);
-    self.socPattern = [SOCPattern patternWithString:patternString];
+    self.socPattern = [ORKSOCPattern patternWithString:patternString];
     return [self itMatchesAndHasParsedArguments:arguments tokenizeQueryStrings:shouldTokenize];
 }
 

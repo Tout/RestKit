@@ -24,7 +24,7 @@
 #import "ORKObjectMappingResult.h"
 #import "ORKObjectMappingProvider.h"
 #import "ORKMappingOperationQueue.h"
-#import "Support.h"
+#import "OSupport.h"
 
 @class ORKObjectMapper;
 

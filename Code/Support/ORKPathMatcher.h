@@ -19,7 +19,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class SOCPattern;
+@class ORKSOCPattern;
 
 /**
  This class performs pattern matching and parameter parsing of strings, usually resource paths.

@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import "Network.h"
+#import "ONetwork.h"
 
 /**
  * Defines a protocol for mapping Cocoa objects to remote resource locations and

@@ -95,7 +95,7 @@
  *      performSelector:onObject:sourceString: is provided a selector with "init" as a prefix
  *      and object is a Class. E.g. [GithubUser class].
  */
-@interface SOCPattern : NSObject {
+@interface ORKSOCPattern : NSObject {
 @private
   NSString* _patternString;
   NSArray* _tokens;
@@ -182,7 +182,7 @@
  * NSDictionary* person = [NSDictionary dictionaryWithObjectsAndKeys:
  *                         @"SECRET|KEY",@"password", 
  *                         @"Joe Bob Briggs", @"name", nil];
- * SOCPattern* soc = [SOCPattern patternWithString:@"/people/:name/:password"];
+ * ORKSOCPattern* soc = [ORKSOCPattern patternWithString:@"/people/:name/:password"];
  * NSString* actualPath = [soc stringFromObject:person withBlock:^(NSString *)propertyValue) {
  *   return [propertyValue stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
  * }
@@ -206,9 +206,9 @@
 /**
  * A convenience method for:
  *
- * SOCPattern* pattern = [SOCPattern patternWithString:string];
+ * ORKSOCPattern* pattern = [ORKSOCPattern patternWithString:string];
  * NSString* result = [pattern stringFromObject:object];
  *
  * @see documentation for stringFromObject:
  */
-NSString* SOCStringFromStringWithObject(NSString* string, id object);
+NSString*ORKSOCStringFromStringWithObject(NSString* string, id object);

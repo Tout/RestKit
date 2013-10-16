@@ -46,7 +46,7 @@
 		25160D2814564E820060A5C5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D2714564E820060A5C5 /* SenTestingKit.framework */; };
 		25160D2A14564E820060A5C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D2914564E820060A5C5 /* UIKit.framework */; };
 		25160D2B14564E820060A5C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D1914564E810060A5C5 /* Foundation.framework */; };
-		25160DD5145650490060A5C5 /* CoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D46145650490060A5C5 /* CoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160DD5145650490060A5C5 /* OCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D46145650490060A5C5 /* OCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160DD6145650490060A5C5 /* NSManagedObject+ActiveRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D47145650490060A5C5 /* NSManagedObject+ActiveRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160DD7145650490060A5C5 /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D48145650490060A5C5 /* NSManagedObject+ActiveRecord.m */; };
 		25160DD9145650490060A5C5 /* ORKManagedObjectLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D4A145650490060A5C5 /* ORKManagedObjectLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,7 +63,7 @@
 		25160DE4145650490060A5C5 /* ORKManagedObjectThreadSafeInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D55145650490060A5C5 /* ORKManagedObjectThreadSafeInvocation.m */; };
 		25160DE5145650490060A5C5 /* ORKObjectPropertyInspector+CoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D56145650490060A5C5 /* ORKObjectPropertyInspector+CoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160DE6145650490060A5C5 /* ORKObjectPropertyInspector+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D57145650490060A5C5 /* ORKObjectPropertyInspector+CoreData.m */; };
-		25160DE7145650490060A5C5 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D59145650490060A5C5 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160DE7145650490060A5C5 /* ONetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D59145650490060A5C5 /* ONetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160DE8145650490060A5C5 /* NSData+ORKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D5A145650490060A5C5 /* NSData+ORKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160DE9145650490060A5C5 /* NSData+ORKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D5B145650490060A5C5 /* NSData+ORKAdditions.m */; };
 		25160DEA145650490060A5C5 /* NSDictionary+ORKRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D5C145650490060A5C5 /* NSDictionary+ORKRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -94,7 +94,7 @@
 		25160E05145650490060A5C5 /* ORKResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D77145650490060A5C5 /* ORKResponse.m */; };
 		25160E06145650490060A5C5 /* ORKURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D78145650490060A5C5 /* ORKURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E07145650490060A5C5 /* ORKURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D79145650490060A5C5 /* ORKURL.m */; };
-		25160E08145650490060A5C5 /* ObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D7B145650490060A5C5 /* ObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160E08145650490060A5C5 /* OObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D7B145650490060A5C5 /* OObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E09145650490060A5C5 /* ORKDynamicObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D7C145650490060A5C5 /* ORKDynamicObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E0A145650490060A5C5 /* ORKDynamicObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D7D145650490060A5C5 /* ORKDynamicObjectMapping.m */; };
 		25160E0B145650490060A5C5 /* ORKErrorMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D7E145650490060A5C5 /* ORKErrorMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -132,7 +132,7 @@
 		25160E2B145650490060A5C5 /* ORKParserRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D9E145650490060A5C5 /* ORKParserRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E2C145650490060A5C5 /* ORKParserRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D9F145650490060A5C5 /* ORKParserRegistry.m */; };
 		25160E2D145650490060A5C5 /* ORKRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DA0145650490060A5C5 /* ORKRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25160E2E145650490060A5C5 /* RestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DA1145650490060A5C5 /* RestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160E2E145650490060A5C5 /* ORestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DA1145650490060A5C5 /* ORestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E31145650490060A5C5 /* lcl_config_components.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DA5145650490060A5C5 /* lcl_config_components.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E32145650490060A5C5 /* lcl_config_extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DA6145650490060A5C5 /* lcl_config_extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E33145650490060A5C5 /* lcl_config_logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DA7145650490060A5C5 /* lcl_config_logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -159,7 +159,7 @@
 		25160E50145650490060A5C5 /* ORKPathMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160DC7145650490060A5C5 /* ORKPathMatcher.m */; };
 		25160E51145650490060A5C5 /* ORKSearchEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DC8145650490060A5C5 /* ORKSearchEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E52145650490060A5C5 /* ORKSearchEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160DC9145650490060A5C5 /* ORKSearchEngine.m */; };
-		25160E53145650490060A5C5 /* Support.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DCA145650490060A5C5 /* Support.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160E53145650490060A5C5 /* OSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DCA145650490060A5C5 /* OSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E79145651060060A5C5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D2714564E820060A5C5 /* SenTestingKit.framework */; };
 		25160E7A145651060060A5C5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160E63145651060060A5C5 /* Cocoa.framework */; };
 		25160E7D145651060060A5C5 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160E62145651060060A5C5 /* RestKit.framework */; };
@@ -198,13 +198,13 @@
 		25160EF91456532C0060A5C5 /* LCLNSLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160EB01456532C0060A5C5 /* LCLNSLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160EFA1456532C0060A5C5 /* LCLNSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160EB11456532C0060A5C5 /* LCLNSLog.m */; };
 		25160EFB1456532C0060A5C5 /* LCLNSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160EB11456532C0060A5C5 /* LCLNSLog.m */; };
-		25160F081456532C0060A5C5 /* SOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160EBD1456532C0060A5C5 /* SOCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25160F091456532C0060A5C5 /* SOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160EBD1456532C0060A5C5 /* SOCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25160F0A1456532C0060A5C5 /* SOCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160EBE1456532C0060A5C5 /* SOCKit.m */; };
-		25160F0B1456532C0060A5C5 /* SOCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160EBE1456532C0060A5C5 /* SOCKit.m */; };
+		25160F081456532C0060A5C5 /* ORKSOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160EBD1456532C0060A5C5 /* ORKSOCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160F091456532C0060A5C5 /* ORKSOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160EBD1456532C0060A5C5 /* ORKSOCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160F0A1456532C0060A5C5 /* ORKSOCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160EBE1456532C0060A5C5 /* ORKSOCKit.m */; };
+		25160F0B1456532C0060A5C5 /* ORKSOCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160EBE1456532C0060A5C5 /* ORKSOCKit.m */; };
 		25160F171456538B0060A5C5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160F161456538B0060A5C5 /* libxml2.dylib */; };
-		25160F25145655AF0060A5C5 /* RestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DA1145650490060A5C5 /* RestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25160F26145655BA0060A5C5 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D59145650490060A5C5 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160F25145655AF0060A5C5 /* ORestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DA1145650490060A5C5 /* ORestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160F26145655BA0060A5C5 /* ONetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D59145650490060A5C5 /* ONetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F27145655BA0060A5C5 /* NSDictionary+ORKRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D5C145650490060A5C5 /* NSDictionary+ORKRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F28145655BA0060A5C5 /* NSDictionary+ORKRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D5D145650490060A5C5 /* NSDictionary+ORKRequestSerialization.m */; };
 		25160F29145655BA0060A5C5 /* ORKClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D60145650490060A5C5 /* ORKClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -233,7 +233,7 @@
 		25160F40145655BA0060A5C5 /* ORKResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D77145650490060A5C5 /* ORKResponse.m */; };
 		25160F41145655BA0060A5C5 /* ORKURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D78145650490060A5C5 /* ORKURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F42145655BA0060A5C5 /* ORKURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D79145650490060A5C5 /* ORKURL.m */; };
-		25160F43145655C60060A5C5 /* ObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D7B145650490060A5C5 /* ObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160F43145655C60060A5C5 /* OObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D7B145650490060A5C5 /* OObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F44145655C60060A5C5 /* ORKDynamicObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D7C145650490060A5C5 /* ORKDynamicObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F45145655C60060A5C5 /* ORKDynamicObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D7D145650490060A5C5 /* ORKDynamicObjectMapping.m */; };
 		25160F46145655C60060A5C5 /* ORKErrorMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D7E145650490060A5C5 /* ORKErrorMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -271,7 +271,7 @@
 		25160F66145655C60060A5C5 /* ORKParserRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D9E145650490060A5C5 /* ORKParserRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F67145655C60060A5C5 /* ORKParserRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D9F145650490060A5C5 /* ORKParserRegistry.m */; };
 		25160F68145655C60060A5C5 /* ORKRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DA0145650490060A5C5 /* ORKRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25160F69145655D10060A5C5 /* CoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D46145650490060A5C5 /* CoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160F69145655D10060A5C5 /* OCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D46145650490060A5C5 /* OCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F6A145655D10060A5C5 /* NSManagedObject+ActiveRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D47145650490060A5C5 /* NSManagedObject+ActiveRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F6B145655D10060A5C5 /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160D48145650490060A5C5 /* NSManagedObject+ActiveRecord.m */; };
 		25160F6D145655D10060A5C5 /* ORKManagedObjectLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D4A145650490060A5C5 /* ORKManagedObjectLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -315,7 +315,7 @@
 		25160F991456576C0060A5C5 /* ORKPathMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160DC7145650490060A5C5 /* ORKPathMatcher.m */; };
 		25160F9A1456576C0060A5C5 /* ORKSearchEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DC8145650490060A5C5 /* ORKSearchEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F9B1456576C0060A5C5 /* ORKSearchEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160DC9145650490060A5C5 /* ORKSearchEngine.m */; };
-		25160F9C1456576C0060A5C5 /* Support.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DCA145650490060A5C5 /* Support.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160F9C1456576C0060A5C5 /* OSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DCA145650490060A5C5 /* OSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F9E1456577F0060A5C5 /* ORKJSONParserJSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DB0145650490060A5C5 /* ORKJSONParserJSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160F9F1456577F0060A5C5 /* ORKJSONParserJSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160DB1145650490060A5C5 /* ORKJSONParserJSONKit.m */; };
 		25160FA1145658BC0060A5C5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160FA0145658BC0060A5C5 /* libxml2.dylib */; };
@@ -797,7 +797,7 @@
 		25160D2614564E820060A5C5 /* RestKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25160D2714564E820060A5C5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		25160D2914564E820060A5C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		25160D46145650490060A5C5 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
+		25160D46145650490060A5C5 /* OCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCoreData.h; sourceTree = "<group>"; };
 		25160D47145650490060A5C5 /* NSManagedObject+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ActiveRecord.h"; sourceTree = "<group>"; };
 		25160D48145650490060A5C5 /* NSManagedObject+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ActiveRecord.m"; sourceTree = "<group>"; };
 		25160D4A145650490060A5C5 /* ORKManagedObjectLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKManagedObjectLoader.h; sourceTree = "<group>"; };
@@ -814,7 +814,7 @@
 		25160D55145650490060A5C5 /* ORKManagedObjectThreadSafeInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKManagedObjectThreadSafeInvocation.m; sourceTree = "<group>"; };
 		25160D56145650490060A5C5 /* ORKObjectPropertyInspector+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ORKObjectPropertyInspector+CoreData.h"; sourceTree = "<group>"; };
 		25160D57145650490060A5C5 /* ORKObjectPropertyInspector+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ORKObjectPropertyInspector+CoreData.m"; sourceTree = "<group>"; };
-		25160D59145650490060A5C5 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		25160D59145650490060A5C5 /* ONetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONetwork.h; sourceTree = "<group>"; };
 		25160D5A145650490060A5C5 /* NSData+ORKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ORKAdditions.h"; path = "../Network/NSData+ORKAdditions.h"; sourceTree = "<group>"; };
 		25160D5B145650490060A5C5 /* NSData+ORKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+ORKAdditions.m"; path = "../Network/NSData+ORKAdditions.m"; sourceTree = "<group>"; };
 		25160D5C145650490060A5C5 /* NSDictionary+ORKRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ORKRequestSerialization.h"; sourceTree = "<group>"; };
@@ -845,7 +845,7 @@
 		25160D77145650490060A5C5 /* ORKResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKResponse.m; sourceTree = "<group>"; };
 		25160D78145650490060A5C5 /* ORKURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKURL.h; sourceTree = "<group>"; };
 		25160D79145650490060A5C5 /* ORKURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKURL.m; sourceTree = "<group>"; };
-		25160D7B145650490060A5C5 /* ObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectMapping.h; sourceTree = "<group>"; };
+		25160D7B145650490060A5C5 /* OObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OObjectMapping.h; sourceTree = "<group>"; };
 		25160D7C145650490060A5C5 /* ORKDynamicObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKDynamicObjectMapping.h; sourceTree = "<group>"; };
 		25160D7D145650490060A5C5 /* ORKDynamicObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKDynamicObjectMapping.m; sourceTree = "<group>"; };
 		25160D7E145650490060A5C5 /* ORKErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKErrorMessage.h; sourceTree = "<group>"; };
@@ -883,7 +883,7 @@
 		25160D9E145650490060A5C5 /* ORKParserRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKParserRegistry.h; sourceTree = "<group>"; };
 		25160D9F145650490060A5C5 /* ORKParserRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKParserRegistry.m; sourceTree = "<group>"; };
 		25160DA0145650490060A5C5 /* ORKRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKRouter.h; sourceTree = "<group>"; };
-		25160DA1145650490060A5C5 /* RestKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestKit.h; sourceTree = "<group>"; };
+		25160DA1145650490060A5C5 /* ORestKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORestKit.h; sourceTree = "<group>"; };
 		25160DA5145650490060A5C5 /* lcl_config_components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_components.h; sourceTree = "<group>"; };
 		25160DA6145650490060A5C5 /* lcl_config_extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_extensions.h; sourceTree = "<group>"; };
 		25160DA7145650490060A5C5 /* lcl_config_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_logger.h; sourceTree = "<group>"; };
@@ -910,7 +910,7 @@
 		25160DC7145650490060A5C5 /* ORKPathMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKPathMatcher.m; sourceTree = "<group>"; };
 		25160DC8145650490060A5C5 /* ORKSearchEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKSearchEngine.h; sourceTree = "<group>"; };
 		25160DC9145650490060A5C5 /* ORKSearchEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKSearchEngine.m; sourceTree = "<group>"; };
-		25160DCA145650490060A5C5 /* Support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Support.h; sourceTree = "<group>"; };
+		25160DCA145650490060A5C5 /* OSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSupport.h; sourceTree = "<group>"; };
 		25160E62145651060060A5C5 /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25160E63145651060060A5C5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		25160E66145651060060A5C5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -941,8 +941,8 @@
 		25160EAF1456532C0060A5C5 /* lcl_config_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_logger.h; sourceTree = "<group>"; };
 		25160EB01456532C0060A5C5 /* LCLNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLNSLog.h; sourceTree = "<group>"; };
 		25160EB11456532C0060A5C5 /* LCLNSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLNSLog.m; sourceTree = "<group>"; };
-		25160EBD1456532C0060A5C5 /* SOCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCKit.h; sourceTree = "<group>"; };
-		25160EBE1456532C0060A5C5 /* SOCKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCKit.m; sourceTree = "<group>"; };
+		25160EBD1456532C0060A5C5 /* ORKSOCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKSOCKit.h; sourceTree = "<group>"; };
+		25160EBE1456532C0060A5C5 /* ORKSOCKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKSOCKit.m; sourceTree = "<group>"; };
 		25160F161456538B0060A5C5 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		25160F7B145657220060A5C5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		25160F7D1456572F0060A5C5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
@@ -1354,7 +1354,7 @@
 		25160D44145650490060A5C5 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				25160DA1145650490060A5C5 /* RestKit.h */,
+				25160DA1145650490060A5C5 /* ORestKit.h */,
 				25160D58145650490060A5C5 /* Network */,
 				25160D7A145650490060A5C5 /* ObjectMapping */,
 				25160D45145650490060A5C5 /* CoreData */,
@@ -1376,7 +1376,7 @@
 				25B6E9E614CF940600B1E881 /* ORKSearchWord.m */,
 				25B6E9E714CF940700B1E881 /* ORKSearchWordObserver.h */,
 				25B6E9E814CF940700B1E881 /* ORKSearchWordObserver.m */,
-				25160D46145650490060A5C5 /* CoreData.h */,
+				25160D46145650490060A5C5 /* OCoreData.h */,
 				25160D47145650490060A5C5 /* NSManagedObject+ActiveRecord.h */,
 				25160D48145650490060A5C5 /* NSManagedObject+ActiveRecord.m */,
 				7394DF3814CF168C00CE7BCE /* ORKFetchRequestManagedObjectCache.h */,
@@ -1417,7 +1417,7 @@
 		25160D58145650490060A5C5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				25160D59145650490060A5C5 /* Network.h */,
+				25160D59145650490060A5C5 /* ONetwork.h */,
 				25160D5C145650490060A5C5 /* NSDictionary+ORKRequestSerialization.h */,
 				25160D5D145650490060A5C5 /* NSDictionary+ORKRequestSerialization.m */,
 				25160D60145650490060A5C5 /* ORKClient.h */,
@@ -1455,7 +1455,7 @@
 			children = (
 				25B6E95A14CF7E3C00B1E881 /* ORKDynamicObjectMappingMatcher.h */,
 				25B6E95B14CF7E3C00B1E881 /* ORKDynamicObjectMappingMatcher.m */,
-				25160D7B145650490060A5C5 /* ObjectMapping.h */,
+				25160D7B145650490060A5C5 /* OObjectMapping.h */,
 				2513504D14B8FE6B00A7E893 /* ORKConfigurationDelegate.h */,
 				25160D7C145650490060A5C5 /* ORKDynamicObjectMapping.h */,
 				25160D7D145650490060A5C5 /* ORKDynamicObjectMapping.m */,
@@ -1542,7 +1542,7 @@
 				25160DC7145650490060A5C5 /* ORKPathMatcher.m */,
 				25160DC8145650490060A5C5 /* ORKSearchEngine.h */,
 				25160DC9145650490060A5C5 /* ORKSearchEngine.m */,
-				25160DCA145650490060A5C5 /* Support.h */,
+				25160DCA145650490060A5C5 /* OSupport.h */,
 				25B408241491CDDB00F21111 /* ORKDirectory.h */,
 				25B408251491CDDB00F21111 /* ORKDirectory.m */,
 				250DF22814C5190E0001DEFA /* ORKOrderedDictionary.h */,
@@ -1681,8 +1681,8 @@
 		25160EB71456532C0060A5C5 /* SOCKit */ = {
 			isa = PBXGroup;
 			children = (
-				25160EBD1456532C0060A5C5 /* SOCKit.h */,
-				25160EBE1456532C0060A5C5 /* SOCKit.m */,
+				25160EBD1456532C0060A5C5 /* ORKSOCKit.h */,
+				25160EBE1456532C0060A5C5 /* ORKSOCKit.m */,
 			);
 			path = SOCKit;
 			sourceTree = "<group>";
@@ -2139,7 +2139,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25160DD5145650490060A5C5 /* CoreData.h in Headers */,
+				25160DD5145650490060A5C5 /* OCoreData.h in Headers */,
 				25FABED614E37A2B00E609E7 /* ORKTestResponseLoader.h in Headers */,
 				25160DD6145650490060A5C5 /* NSManagedObject+ActiveRecord.h in Headers */,
 				25160DD9145650490060A5C5 /* ORKManagedObjectLoader.h in Headers */,
@@ -2149,7 +2149,7 @@
 				25160DE1145650490060A5C5 /* ORKManagedObjectStore.h in Headers */,
 				25160DE3145650490060A5C5 /* ORKManagedObjectThreadSafeInvocation.h in Headers */,
 				25160DE5145650490060A5C5 /* ORKObjectPropertyInspector+CoreData.h in Headers */,
-				25160DE7145650490060A5C5 /* Network.h in Headers */,
+				25160DE7145650490060A5C5 /* ONetwork.h in Headers */,
 				25160DE8145650490060A5C5 /* NSData+ORKAdditions.h in Headers */,
 				25160DEA145650490060A5C5 /* NSDictionary+ORKRequestSerialization.h in Headers */,
 				25160DEE145650490060A5C5 /* ORKClient.h in Headers */,
@@ -2166,7 +2166,7 @@
 				25160E02145650490060A5C5 /* ORKRequestSerialization.h in Headers */,
 				25160E04145650490060A5C5 /* ORKResponse.h in Headers */,
 				25160E06145650490060A5C5 /* ORKURL.h in Headers */,
-				25160E08145650490060A5C5 /* ObjectMapping.h in Headers */,
+				25160E08145650490060A5C5 /* OObjectMapping.h in Headers */,
 				25160E09145650490060A5C5 /* ORKDynamicObjectMapping.h in Headers */,
 				25160E0B145650490060A5C5 /* ORKErrorMessage.h in Headers */,
 				25160E0D145650490060A5C5 /* ORKMappingOperationQueue.h in Headers */,
@@ -2204,7 +2204,7 @@
 				25160E4E145650490060A5C5 /* ORKParser.h in Headers */,
 				25160E4F145650490060A5C5 /* ORKPathMatcher.h in Headers */,
 				25160E51145650490060A5C5 /* ORKSearchEngine.h in Headers */,
-				25160E53145650490060A5C5 /* Support.h in Headers */,
+				25160E53145650490060A5C5 /* OSupport.h in Headers */,
 				25160ECA1456532C0060A5C5 /* GCOAuth.h in Headers */,
 				25160ECE1456532C0060A5C5 /* NSData+Base64.h in Headers */,
 				25160ED51456532C0060A5C5 /* FileMD5Hash.h in Headers */,
@@ -2215,8 +2215,8 @@
 				25160EE81456532C0060A5C5 /* lcl_config_extensions.template.h in Headers */,
 				25160EEA1456532C0060A5C5 /* lcl_config_logger.template.h in Headers */,
 				25160EF81456532C0060A5C5 /* LCLNSLog.h in Headers */,
-				25160F081456532C0060A5C5 /* SOCKit.h in Headers */,
-				25160E2E145650490060A5C5 /* RestKit.h in Headers */,
+				25160F081456532C0060A5C5 /* ORKSOCKit.h in Headers */,
+				25160E2E145650490060A5C5 /* ORestKit.h in Headers */,
 				254A62B914AD544200939BEE /* ORKObjectPaginator.h in Headers */,
 				25B408261491CDDC00F21111 /* ORKDirectory.h in Headers */,
 				2513504E14B8FE6B00A7E893 /* ORKConfigurationDelegate.h in Headers */,
@@ -2290,8 +2290,8 @@
 				25160EE91456532C0060A5C5 /* lcl_config_extensions.template.h in Headers */,
 				25160EEB1456532C0060A5C5 /* lcl_config_logger.template.h in Headers */,
 				25160EF91456532C0060A5C5 /* LCLNSLog.h in Headers */,
-				25160F091456532C0060A5C5 /* SOCKit.h in Headers */,
-				25160F26145655BA0060A5C5 /* Network.h in Headers */,
+				25160F091456532C0060A5C5 /* ORKSOCKit.h in Headers */,
+				25160F26145655BA0060A5C5 /* ONetwork.h in Headers */,
 				25160F27145655BA0060A5C5 /* NSDictionary+ORKRequestSerialization.h in Headers */,
 				25160F29145655BA0060A5C5 /* ORKClient.h in Headers */,
 				25160F2B145655BA0060A5C5 /* ORKNotifications.h in Headers */,
@@ -2307,7 +2307,7 @@
 				25160F3D145655BA0060A5C5 /* ORKRequestSerialization.h in Headers */,
 				25160F3F145655BA0060A5C5 /* ORKResponse.h in Headers */,
 				25160F41145655BA0060A5C5 /* ORKURL.h in Headers */,
-				25160F43145655C60060A5C5 /* ObjectMapping.h in Headers */,
+				25160F43145655C60060A5C5 /* OObjectMapping.h in Headers */,
 				25160F44145655C60060A5C5 /* ORKDynamicObjectMapping.h in Headers */,
 				25160F46145655C60060A5C5 /* ORKErrorMessage.h in Headers */,
 				25160F48145655C60060A5C5 /* ORKMappingOperationQueue.h in Headers */,
@@ -2329,7 +2329,7 @@
 				25160F64145655C60060A5C5 /* ORKObjectSerializer.h in Headers */,
 				25160F66145655C60060A5C5 /* ORKParserRegistry.h in Headers */,
 				25160F68145655C60060A5C5 /* ORKRouter.h in Headers */,
-				25160F69145655D10060A5C5 /* CoreData.h in Headers */,
+				25160F69145655D10060A5C5 /* OCoreData.h in Headers */,
 				25160F6A145655D10060A5C5 /* NSManagedObject+ActiveRecord.h in Headers */,
 				25160F6D145655D10060A5C5 /* ORKManagedObjectLoader.h in Headers */,
 				25160F6F145655D10060A5C5 /* ORKManagedObjectMapping.h in Headers */,
@@ -2353,9 +2353,9 @@
 				25160F971456576C0060A5C5 /* ORKParser.h in Headers */,
 				25160F981456576C0060A5C5 /* ORKPathMatcher.h in Headers */,
 				25160F9A1456576C0060A5C5 /* ORKSearchEngine.h in Headers */,
-				25160F9C1456576C0060A5C5 /* Support.h in Headers */,
+				25160F9C1456576C0060A5C5 /* OSupport.h in Headers */,
 				25160F9E1456577F0060A5C5 /* ORKJSONParserJSONKit.h in Headers */,
-				25160F25145655AF0060A5C5 /* RestKit.h in Headers */,
+				25160F25145655AF0060A5C5 /* ORestKit.h in Headers */,
 				25B408271491CDDC00F21111 /* ORKDirectory.h in Headers */,
 				2513504F14B8FE6B00A7E893 /* ORKConfigurationDelegate.h in Headers */,
 				254A62BA14AD544200939BEE /* ORKObjectPaginator.h in Headers */,
@@ -2754,7 +2754,7 @@
 				25160EDF1456532C0060A5C5 /* JSONKit.m in Sources */,
 				25160EE41456532C0060A5C5 /* lcl.m in Sources */,
 				25160EFA1456532C0060A5C5 /* LCLNSLog.m in Sources */,
-				25160F0A1456532C0060A5C5 /* SOCKit.m in Sources */,
+				25160F0A1456532C0060A5C5 /* ORKSOCKit.m in Sources */,
 				25B408281491CDDC00F21111 /* ORKDirectory.m in Sources */,
 				254A62BB14AD544200939BEE /* ORKObjectPaginator.m in Sources */,
 				250DF22C14C5190E0001DEFA /* ORKOrderedDictionary.m in Sources */,
@@ -2907,7 +2907,7 @@
 				25160EE01456532C0060A5C5 /* JSONKit.m in Sources */,
 				25160EE51456532C0060A5C5 /* lcl.m in Sources */,
 				25160EFB1456532C0060A5C5 /* LCLNSLog.m in Sources */,
-				25160F0B1456532C0060A5C5 /* SOCKit.m in Sources */,
+				25160F0B1456532C0060A5C5 /* ORKSOCKit.m in Sources */,
 				25160F28145655BA0060A5C5 /* NSDictionary+ORKRequestSerialization.m in Sources */,
 				25160F2A145655BA0060A5C5 /* ORKClient.m in Sources */,
 				25160F2C145655BA0060A5C5 /* ORKNotifications.m in Sources */,

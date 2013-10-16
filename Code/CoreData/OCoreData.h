@@ -19,7 +19,7 @@
 //
 
 #import <CoreData/CoreData.h>
-#import "ObjectMapping.h"
+#import "OObjectMapping.h"
 #import "NSManagedObject+ActiveRecord.h"
 #import "ORKManagedObjectStore.h"
 #import "ORKManagedObjectSeeder.h"

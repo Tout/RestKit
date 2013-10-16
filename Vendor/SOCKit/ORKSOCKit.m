@@ -14,7 +14,7 @@
 // limitations under the License.
 //
 
-#import "SOCKit.h"
+#import "ORKSOCKit.h"
 
 #import <objc/runtime.h>
 #import <assert.h>
@@ -27,16 +27,16 @@ typedef enum {
   SOCArgumentTypeLongLong,
   SOCArgumentTypeFloat,
   SOCArgumentTypeDouble,
-} SOCArgumentType;
+} ORKSOCArgumentType;
 
-SOCArgumentType SOCArgumentTypeForTypeAsChar(char argType);
-NSString* kTemporaryBackslashToken = @"/backslash/";
+ORKSOCArgumentType ORKSOCArgumentTypeForTypeAsChar(char argType);
+NSString*kORKTemporaryBackslashToken = @"/backslash/";
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface SOCParameter : NSObject {
+@interface ORKSOCParameter : NSObject {
 @private
   NSString* _string;
 }
@@ -52,7 +52,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface SOCPattern()
+@interface ORKSOCPattern ()
 
 - (void)_compilePattern;
 
@@ -62,7 +62,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation SOCPattern
+@implementation ORKSOCPattern
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -120,8 +120,8 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
   // `\` and `\.` rather than `\\` and `.`.
   NSString* escapedPatternString = _patternString;
   if ([escapedPatternString rangeOfString:@"\\\\"].length > 0) {
-    escapedPatternString = [escapedPatternString stringByReplacingOccurrencesOfString: @"\\\\"
-                                                                           withString: kTemporaryBackslashToken];
+    escapedPatternString = [escapedPatternString stringByReplacingOccurrencesOfString:@"\\\\"
+                                                                           withString:kORKTemporaryBackslashToken];
   }
   
   // Scan through the string, creating tokens that are either strings or parameters.
@@ -161,7 +161,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
 
       if ([token length] > 0) {
         // Only add parameters that have valid names.
-        SOCParameter* parameter = [SOCParameter parameterWithString:token];
+        ORKSOCParameter * parameter = [ORKSOCParameter parameterWithString:token];
         [parameters addObject:parameter];
         [tokens addObject:parameter];
 
@@ -176,7 +176,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
   if ([parameters count] > 0) {
     BOOL lastWasParameter = NO;
     for (id token in tokens) {
-      if ([token isKindOfClass:[SOCParameter class]]) {
+      if ([token isKindOfClass:[ORKSOCParameter class]]) {
         NSAssert(!lastWasParameter, @"Parameters must be separated by non-parameter characters.");
         lastWasParameter = YES;
 
@@ -200,7 +200,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)_stringFromEscapedToken:(NSString *)token {
   if ([token rangeOfString:@"\\"].length == 0
-      && [token rangeOfString:kTemporaryBackslashToken].length == 0) {
+      && [token rangeOfString:kORKTemporaryBackslashToken].length == 0) {
     // The common case (faster and creates fewer autoreleased strings).
     return token;
     
@@ -211,7 +211,10 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
     [mutableToken replaceOccurrencesOfString:@"\\." withString:@"." options:0 range:NSMakeRange(0, [mutableToken length])];
     [mutableToken replaceOccurrencesOfString:@"\\@" withString:@"@" options:0 range:NSMakeRange(0, [mutableToken length])];
     [mutableToken replaceOccurrencesOfString:@"\\:" withString:@":" options:0 range:NSMakeRange(0, [mutableToken length])];
-    [mutableToken replaceOccurrencesOfString:kTemporaryBackslashToken withString:@"\\" options:0 range:NSMakeRange(0, [mutableToken length])];
+      [mutableToken replaceOccurrencesOfString:kORKTemporaryBackslashToken
+                                    withString:@"\\"
+                                       options:0
+                                         range:NSMakeRange(0, [mutableToken length])];
     return [mutableToken autorelease];
   }
 }
@@ -309,7 +312,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)setArgument:(NSString*)text withType:(SOCArgumentType)type atIndex:(NSInteger)index forInvocation:(NSInvocation*)invocation {
+- (void)setArgument:(NSString*)text withType:(ORKSOCArgumentType)type atIndex:(NSInteger)index forInvocation:(NSInvocation*)invocation {
   // There are two implicit arguments with an invocation.
   index+=2;
 
@@ -360,7 +363,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
 
     char argType[4];
     method_getArgumentType(method, (unsigned int) ix + 2, argType, sizeof(argType) / sizeof(argType[0]));
-    SOCArgumentType type = SOCArgumentTypeForTypeAsChar(argType[0]);
+    ORKSOCArgumentType type = ORKSOCArgumentTypeForTypeAsChar(argType[0]);
 
     [self setArgument:value withType:type atIndex:ix forInvocation:invocation];
   }
@@ -404,7 +407,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
   NSAssert([self gatherParameterValues:&values fromString:sourceString], @"The pattern can't be used with this string.");
 
   for (NSInteger ix = 0; ix < [values count]; ++ix) {
-    SOCParameter* parameter = [_parameters objectAtIndex:ix];
+    ORKSOCParameter * parameter = [_parameters objectAtIndex:ix];
     id value = [values objectAtIndex:ix];
     [kvs setObject:value forKey:parameter.string];
   }
@@ -424,7 +427,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
       [accumulator appendString:[self _stringFromEscapedToken:token]];
 
     } else {
-      SOCParameter* parameter = token;
+      ORKSOCParameter * parameter = token;
       [accumulator appendString:[parameterValues objectForKey:parameter.string]];
     }
   }
@@ -443,7 +446,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
   }
   NSMutableDictionary* parameterValues =
   [NSMutableDictionary dictionaryWithCapacity:[_parameters count]];
-  for (SOCParameter* parameter in _parameters) {
+  for (ORKSOCParameter * parameter in _parameters) {
     NSString* stringValue = [NSString stringWithFormat:@"%@", [object valueForKeyPath:parameter.string]];
     [parameterValues setObject:stringValue forKey:parameter.string];
   }
@@ -458,7 +461,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
     return @"";
   }
   NSMutableDictionary* parameterValues = [NSMutableDictionary dictionaryWithCapacity:[_parameters count]];
-  for (SOCParameter* parameter in _parameters) {
+  for (ORKSOCParameter * parameter in _parameters) {
     NSString* stringValue = [NSString stringWithFormat:@"%@", [object valueForKeyPath:parameter.string]];
     if (nil != block) {
       stringValue = block(stringValue);
@@ -474,7 +477,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation SOCParameter
+@implementation ORKSOCParameter
 
 - (void)dealloc {
   [_string release]; _string = nil;
@@ -503,7 +506,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-SOCArgumentType SOCArgumentTypeForTypeAsChar(char argType) {
+ORKSOCArgumentType ORKSOCArgumentTypeForTypeAsChar(char argType) {
   if (argType == 'c' || argType == 'i' || argType == 's' || argType == 'l' || argType == 'C'
       || argType == 'I' || argType == 'S' || argType == 'L') {
     return SOCArgumentTypeInteger;
@@ -526,8 +529,8 @@ SOCArgumentType SOCArgumentTypeForTypeAsChar(char argType) {
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-NSString* SOCStringFromStringWithObject(NSString* string, id object) {
-  SOCPattern* pattern = [[SOCPattern alloc] initWithString:string];
+NSString*ORKSOCStringFromStringWithObject(NSString* string, id object) {
+  ORKSOCPattern * pattern = [[ORKSOCPattern alloc] initWithString:string];
   NSString* result = [pattern stringFromObject:object];
   [pattern release];
   return result;

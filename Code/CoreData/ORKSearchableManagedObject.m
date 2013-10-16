@@ -19,7 +19,7 @@
 //
 
 #import "ORKSearchableManagedObject.h"
-#import "CoreData.h"
+#import "OCoreData.h"
 #import "ORKLog.h"
 
 // Set Logging Component

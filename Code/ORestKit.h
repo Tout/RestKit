@@ -18,10 +18,10 @@
 //  limitations under the License.
 //
 
-#import "Network.h"
-#import "Support.h"
-#import "ObjectMapping.h"
-#import "CoreData.h"
+#import "ONetwork.h"
+#import "OSupport.h"
+#import "OObjectMapping.h"
+#import "OCoreData.h"
 
 /**
  Set the App logging component. This header

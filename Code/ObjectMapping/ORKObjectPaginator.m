@@ -21,7 +21,7 @@
 #import "ORKObjectPaginator.h"
 #import "ORKManagedObjectLoader.h"
 #import "ORKObjectMappingOperation.h"
-#import "SOCKit.h"
+#import "ORKSOCKit.h"
 #import "ORKLog.h"
 
 static NSUInteger ORKObjectPaginatorDefaultPerPage = 25;
