@@ -438,7 +438,7 @@
 // NOTE: We do NOT call super here. We are overloading the default behavior from ORKRequest
 - (void)didFinishLoad:(ORKResponse *)response
 {
-    NSAssert([NSThread isMainThread], @"ORKObjectLoaderDelegate callbacks must occur on the main thread");
+//    NSAssert([NSThread isMainThread], @"ORKObjectLoaderDelegate callbacks must occur on the main thread");
     self.response = response;
 
     if ((_cachePolicy & ORKRequestCachePolicyEtag) && [response isNotModified]) {
