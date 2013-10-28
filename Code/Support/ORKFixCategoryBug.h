@@ -29,7 +29,8 @@
 
  Shamelessly borrowed from Three20
  */
-#define ORK_FIX_CATEGORY_BUG(name) @interface ORK_FIX_CATEGORY_BUG##name @end \
-@implementation ORK_FIX_CATEGORY_BUG##name @end
+#define ORK_FIX_CATEGORY_BUG(name)
+//#define ORK_FIX_CATEGORY_BUG(name) @interface ORK_FIX_CATEGORY_BUG##name @end \
+//@implementation ORK_FIX_CATEGORY_BUG##name @end
 
 #endif
