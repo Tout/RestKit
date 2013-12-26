@@ -21,7 +21,7 @@
 		25055B9014EEF40000B9C4DD /* ORKMappingTestExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = 25055B8D14EEF40000B9C4DD /* ORKMappingTestExpectation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25055B9114EEF40000B9C4DD /* ORKMappingTestExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25055B8E14EEF40000B9C4DD /* ORKMappingTestExpectation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		25055B9214EEF40000B9C4DD /* ORKMappingTestExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25055B8E14EEF40000B9C4DD /* ORKMappingTestExpectation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		25055B9314EEFEC800B9C4DD /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D1614564E810060A5C5 /* libRestKit.a */; };
+		25055B9314EEFEC800B9C4DD /* libORestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D1614564E810060A5C5 /* libORestKit.a */; };
 		25079C6F151B93DB00266AE7 /* NSEntityDescription+ORKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 25079C6D151B93DB00266AE7 /* NSEntityDescription+ORKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25079C70151B93DB00266AE7 /* NSEntityDescription+ORKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 25079C6D151B93DB00266AE7 /* NSEntityDescription+ORKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25079C71151B93DB00266AE7 /* NSEntityDescription+ORKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 25079C6E151B93DB00266AE7 /* NSEntityDescription+ORKAdditions.m */; };
@@ -144,7 +144,7 @@
 		25160E39145650490060A5C5 /* NSURL+ORKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160DAD145650490060A5C5 /* NSURL+ORKAdditions.m */; };
 		25160E3A145650490060A5C5 /* ORKJSONParserJSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DB0145650490060A5C5 /* ORKJSONParserJSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E3B145650490060A5C5 /* ORKJSONParserJSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160DB1145650490060A5C5 /* ORKJSONParserJSONKit.m */; };
-		25160E44145650490060A5C5 /* RestKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 25160DBB145650490060A5C5 /* RestKit-Prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
+		25160E44145650490060A5C5 /* ORestKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 25160DBB145650490060A5C5 /* ORestKit-Prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E45145650490060A5C5 /* ORKAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DBC145650490060A5C5 /* ORKAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E46145650490060A5C5 /* ORKAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160DBD145650490060A5C5 /* ORKAlert.m */; };
 		25160E47145650490060A5C5 /* ORKDotNetDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DBE145650490060A5C5 /* ORKDotNetDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -162,7 +162,7 @@
 		25160E53145650490060A5C5 /* OSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DCA145650490060A5C5 /* OSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E79145651060060A5C5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D2714564E820060A5C5 /* SenTestingKit.framework */; };
 		25160E7A145651060060A5C5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160E63145651060060A5C5 /* Cocoa.framework */; };
-		25160E7D145651060060A5C5 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160E62145651060060A5C5 /* RestKit.framework */; };
+		25160E7D145651060060A5C5 /* ORestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160E62145651060060A5C5 /* ORestKit.framework */; };
 		25160ECA1456532C0060A5C5 /* GCOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160E8F1456532C0060A5C5 /* GCOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160ECB1456532C0060A5C5 /* GCOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160E8F1456532C0060A5C5 /* GCOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160ECC1456532C0060A5C5 /* GCOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160E901456532C0060A5C5 /* GCOAuth.m */; };
@@ -792,9 +792,9 @@
 		250DF25E14C680F90001DEFA /* ORKObjectMappingProvider+Contexts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ORKObjectMappingProvider+Contexts.h"; sourceTree = "<group>"; };
 		25119FB5154A34B400C6BC58 /* parents_and_children.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parents_and_children.json; sourceTree = "<group>"; };
 		2513504D14B8FE6B00A7E893 /* ORKConfigurationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKConfigurationDelegate.h; sourceTree = "<group>"; };
-		25160D1614564E810060A5C5 /* libRestKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRestKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		25160D1614564E810060A5C5 /* libORestKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libORestKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		25160D1914564E810060A5C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		25160D2614564E820060A5C5 /* RestKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25160D2614564E820060A5C5 /* ORestKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ORestKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25160D2714564E820060A5C5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		25160D2914564E820060A5C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		25160D46145650490060A5C5 /* OCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCoreData.h; sourceTree = "<group>"; };
@@ -895,7 +895,7 @@
 		25160DAD145650490060A5C5 /* NSURL+ORKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ORKAdditions.m"; sourceTree = "<group>"; };
 		25160DB0145650490060A5C5 /* ORKJSONParserJSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKJSONParserJSONKit.h; sourceTree = "<group>"; };
 		25160DB1145650490060A5C5 /* ORKJSONParserJSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKJSONParserJSONKit.m; sourceTree = "<group>"; };
-		25160DBB145650490060A5C5 /* RestKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RestKit-Prefix.pch"; sourceTree = "<group>"; };
+		25160DBB145650490060A5C5 /* ORestKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ORestKit-Prefix.pch"; sourceTree = "<group>"; };
 		25160DBC145650490060A5C5 /* ORKAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKAlert.h; sourceTree = "<group>"; };
 		25160DBD145650490060A5C5 /* ORKAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKAlert.m; sourceTree = "<group>"; };
 		25160DBE145650490060A5C5 /* ORKDotNetDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKDotNetDateFormatter.h; sourceTree = "<group>"; };
@@ -911,12 +911,12 @@
 		25160DC8145650490060A5C5 /* ORKSearchEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKSearchEngine.h; sourceTree = "<group>"; };
 		25160DC9145650490060A5C5 /* ORKSearchEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKSearchEngine.m; sourceTree = "<group>"; };
 		25160DCA145650490060A5C5 /* OSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSupport.h; sourceTree = "<group>"; };
-		25160E62145651060060A5C5 /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25160E62145651060060A5C5 /* ORestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ORestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25160E63145651060060A5C5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		25160E66145651060060A5C5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		25160E67145651060060A5C5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		25160E68145651060060A5C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		25160E78145651060060A5C5 /* RestKitFrameworkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestKitFrameworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25160E78145651060060A5C5 /* ORestKitFrameworkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ORestKitFrameworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25160E8F1456532C0060A5C5 /* GCOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCOAuth.h; sourceTree = "<group>"; };
 		25160E901456532C0060A5C5 /* GCOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCOAuth.m; sourceTree = "<group>"; };
 		25160E911456532C0060A5C5 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -1070,7 +1070,7 @@
 		257ABAAF15112DD400CCAA76 /* NSManagedObjectContext+ORKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+ORKAdditions.m"; sourceTree = "<group>"; };
 		257ABAB41511371C00CCAA76 /* NSManagedObject+ORKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ORKAdditions.h"; sourceTree = "<group>"; };
 		257ABAB51511371D00CCAA76 /* NSManagedObject+ORKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ORKAdditions.m"; sourceTree = "<group>"; };
-		259C301615128079003066A2 /* RestKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		259C301615128079003066A2 /* ORestKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ORestKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		259D983B154F6C90008C90F5 /* benchmark_parents_and_children.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = benchmark_parents_and_children.json; sourceTree = "<group>"; };
 		259D98521550C69A008C90F5 /* ORKEntityByAttributeCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKEntityByAttributeCache.h; sourceTree = "<group>"; };
 		259D98531550C69A008C90F5 /* ORKEntityByAttributeCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKEntityByAttributeCache.m; sourceTree = "<group>"; };
@@ -1185,9 +1185,9 @@
 		25EC1AB914F8019F00C3CF3F /* ORKRefreshGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKRefreshGestureRecognizer.m; sourceTree = "<group>"; };
 		25EC1ABA14F8019F00C3CF3F /* ORKRefreshTriggerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKRefreshTriggerView.h; sourceTree = "<group>"; };
 		25EC1ABB14F8019F00C3CF3F /* ORKRefreshTriggerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKRefreshTriggerView.m; sourceTree = "<group>"; };
-		25EC1AD814F8022600C3CF3F /* RestKitFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestKitFramework-Info.plist"; sourceTree = "<group>"; };
-		25EC1AD914F8022600C3CF3F /* RestKitFrameworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestKitFrameworkTests-Info.plist"; sourceTree = "<group>"; };
-		25EC1ADA14F8022600C3CF3F /* RestKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestKitTests-Info.plist"; sourceTree = "<group>"; };
+		25EC1AD814F8022600C3CF3F /* ORestKitFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ORestKitFramework-Info.plist"; sourceTree = "<group>"; };
+		25EC1AD914F8022600C3CF3F /* ORestKitFrameworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ORestKitFrameworkTests-Info.plist"; sourceTree = "<group>"; };
+		25EC1ADA14F8022600C3CF3F /* ORestKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ORestKitTests-Info.plist"; sourceTree = "<group>"; };
 		25EC1ADC14F8022600C3CF3F /* RestKitCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestKitCoreData.xcdatamodel; sourceTree = "<group>"; };
 		25EC1ADE14F8022600C3CF3F /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
 		25EC1ADF14F8022600C3CF3F /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
@@ -1198,8 +1198,8 @@
 		25EC1AE414F8022600C3CF3F /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		25EC1AE514F8022600C3CF3F /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		25EC1B0014F8078100C3CF3F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		25EC1B1E14F821B500C3CF3F /* RestKitResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RestKitResources-Prefix.pch"; sourceTree = "<group>"; };
-		25EC1B1F14F8220800C3CF3F /* RestKitResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestKitResources-Info.plist"; sourceTree = "<group>"; };
+		25EC1B1E14F821B500C3CF3F /* ORestKitResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ORestKitResources-Prefix.pch"; sourceTree = "<group>"; };
+		25EC1B1F14F8220800C3CF3F /* ORestKitResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ORestKitResources-Info.plist"; sourceTree = "<group>"; };
 		25EC1B3714F84B5C00C3CF3F /* UIImage+ORKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ORKAdditions.h"; sourceTree = "<group>"; };
 		25EC1B3814F84B5C00C3CF3F /* UIImage+ORKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ORKAdditions.m"; sourceTree = "<group>"; };
 		25FABED414E37A2B00E609E7 /* ORKTestResponseLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORKTestResponseLoader.h; path = Testing/ORKTestResponseLoader.h; sourceTree = "<group>"; };
@@ -1244,7 +1244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25055B9314EEFEC800B9C4DD /* libRestKit.a in Frameworks */,
+				25055B9314EEFEC800B9C4DD /* libORestKit.a in Frameworks */,
 				25B6EA0814CF947E00B1E881 /* CoreGraphics.framework in Frameworks */,
 				25B6EA0614CF946400B1E881 /* QuartzCore.framework in Frameworks */,
 				251611321456F56C0060A5C5 /* MobileCoreServices.framework in Frameworks */,
@@ -1277,7 +1277,7 @@
 			files = (
 				25160E79145651060060A5C5 /* SenTestingKit.framework in Frameworks */,
 				25160E7A145651060060A5C5 /* Cocoa.framework in Frameworks */,
-				25160E7D145651060060A5C5 /* RestKit.framework in Frameworks */,
+				25160E7D145651060060A5C5 /* ORestKit.framework in Frameworks */,
 				250CA67D147D8E8B0047D347 /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1317,11 +1317,11 @@
 		25160D1714564E810060A5C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25160D1614564E810060A5C5 /* libRestKit.a */,
-				25160D2614564E820060A5C5 /* RestKitTests.octest */,
-				25160E62145651060060A5C5 /* RestKit.framework */,
-				25160E78145651060060A5C5 /* RestKitFrameworkTests.octest */,
-				259C301615128079003066A2 /* RestKitResources.bundle */,
+				25160D1614564E810060A5C5 /* libORestKit.a */,
+				25160D2614564E820060A5C5 /* ORestKitTests.octest */,
+				25160E62145651060060A5C5 /* ORestKit.framework */,
+				25160E78145651060060A5C5 /* ORestKitFrameworkTests.octest */,
+				259C301615128079003066A2 /* ORestKitResources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1525,7 +1525,7 @@
 				25160DAC145650490060A5C5 /* NSURL+ORKAdditions.h */,
 				25160DAD145650490060A5C5 /* NSURL+ORKAdditions.m */,
 				25160DAE145650490060A5C5 /* Parsers */,
-				25160DBB145650490060A5C5 /* RestKit-Prefix.pch */,
+				25160DBB145650490060A5C5 /* ORestKit-Prefix.pch */,
 				25160DBC145650490060A5C5 /* ORKAlert.h */,
 				25160DBD145650490060A5C5 /* ORKAlert.m */,
 				25160DBE145650490060A5C5 /* ORKDotNetDateFormatter.h */,
@@ -2078,7 +2078,7 @@
 			isa = PBXGroup;
 			children = (
 				25EC1ADB14F8022600C3CF3F /* RestKitCoreData.xcdatamodeld */,
-				25EC1B1E14F821B500C3CF3F /* RestKitResources-Prefix.pch */,
+				25EC1B1E14F821B500C3CF3F /* ORestKitResources-Prefix.pch */,
 				25EC1AD714F8022600C3CF3F /* PLISTs */,
 				25EC1ADD14F8022600C3CF3F /* ORKRefreshTriggerViewAssets */,
 			);
@@ -2088,10 +2088,10 @@
 		25EC1AD714F8022600C3CF3F /* PLISTs */ = {
 			isa = PBXGroup;
 			children = (
-				25EC1B1F14F8220800C3CF3F /* RestKitResources-Info.plist */,
-				25EC1AD814F8022600C3CF3F /* RestKitFramework-Info.plist */,
-				25EC1AD914F8022600C3CF3F /* RestKitFrameworkTests-Info.plist */,
-				25EC1ADA14F8022600C3CF3F /* RestKitTests-Info.plist */,
+				25EC1B1F14F8220800C3CF3F /* ORestKitResources-Info.plist */,
+				25EC1AD814F8022600C3CF3F /* ORestKitFramework-Info.plist */,
+				25EC1AD914F8022600C3CF3F /* ORestKitFrameworkTests-Info.plist */,
+				25EC1ADA14F8022600C3CF3F /* ORestKitTests-Info.plist */,
 			);
 			path = PLISTs;
 			sourceTree = "<group>";
@@ -2195,7 +2195,7 @@
 				25160E36145650490060A5C5 /* NSString+ORKAdditions.h in Headers */,
 				25160E38145650490060A5C5 /* NSURL+ORKAdditions.h in Headers */,
 				25160E3A145650490060A5C5 /* ORKJSONParserJSONKit.h in Headers */,
-				25160E44145650490060A5C5 /* RestKit-Prefix.pch in Headers */,
+				25160E44145650490060A5C5 /* ORestKit-Prefix.pch in Headers */,
 				25160E45145650490060A5C5 /* ORKAlert.h in Headers */,
 				25160E47145650490060A5C5 /* ORKDotNetDateFormatter.h in Headers */,
 				25160E49145650490060A5C5 /* ORKFixCategoryBug.h in Headers */,
@@ -2404,9 +2404,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		25160D1514564E810060A5C5 /* RestKit */ = {
+		25160D1514564E810060A5C5 /* ORestKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25160D3A14564E820060A5C5 /* Build configuration list for PBXNativeTarget "RestKit" */;
+			buildConfigurationList = 25160D3A14564E820060A5C5 /* Build configuration list for PBXNativeTarget "ORestKit" */;
 			buildPhases = (
 				25160D1214564E810060A5C5 /* Sources */,
 				25160D1314564E810060A5C5 /* Frameworks */,
@@ -2416,14 +2416,14 @@
 			);
 			dependencies = (
 			);
-			name = RestKit;
+			name = ORestKit;
 			productName = RestKit;
-			productReference = 25160D1614564E810060A5C5 /* libRestKit.a */;
+			productReference = 25160D1614564E810060A5C5 /* libORestKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		25160D2514564E820060A5C5 /* RestKitTests */ = {
+		25160D2514564E820060A5C5 /* ORestKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25160D3D14564E820060A5C5 /* Build configuration list for PBXNativeTarget "RestKitTests" */;
+			buildConfigurationList = 25160D3D14564E820060A5C5 /* Build configuration list for PBXNativeTarget "ORestKitTests" */;
 			buildPhases = (
 				25160D2114564E820060A5C5 /* Sources */,
 				25160D2214564E820060A5C5 /* Frameworks */,
@@ -2435,14 +2435,14 @@
 			dependencies = (
 				25160D2D14564E820060A5C5 /* PBXTargetDependency */,
 			);
-			name = RestKitTests;
+			name = ORestKitTests;
 			productName = RestKitTests;
-			productReference = 25160D2614564E820060A5C5 /* RestKitTests.octest */;
+			productReference = 25160D2614564E820060A5C5 /* ORestKitTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		25160E61145651060060A5C5 /* RestKitFramework */ = {
+		25160E61145651060060A5C5 /* ORestKitFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25160E87145651060060A5C5 /* Build configuration list for PBXNativeTarget "RestKitFramework" */;
+			buildConfigurationList = 25160E87145651060060A5C5 /* Build configuration list for PBXNativeTarget "ORestKitFramework" */;
 			buildPhases = (
 				25160E5D145651060060A5C5 /* Sources */,
 				25160E5E145651060060A5C5 /* Frameworks */,
@@ -2453,14 +2453,14 @@
 			);
 			dependencies = (
 			);
-			name = RestKitFramework;
+			name = ORestKitFramework;
 			productName = RestKitFramework;
-			productReference = 25160E62145651060060A5C5 /* RestKit.framework */;
+			productReference = 25160E62145651060060A5C5 /* ORestKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		25160E77145651060060A5C5 /* RestKitFrameworkTests */ = {
+		25160E77145651060060A5C5 /* ORestKitFrameworkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25160E8A145651060060A5C5 /* Build configuration list for PBXNativeTarget "RestKitFrameworkTests" */;
+			buildConfigurationList = 25160E8A145651060060A5C5 /* Build configuration list for PBXNativeTarget "ORestKitFrameworkTests" */;
 			buildPhases = (
 				25160E73145651060060A5C5 /* Sources */,
 				25160E74145651060060A5C5 /* Frameworks */,
@@ -2473,14 +2473,14 @@
 			dependencies = (
 				25160E7C145651060060A5C5 /* PBXTargetDependency */,
 			);
-			name = RestKitFrameworkTests;
+			name = ORestKitFrameworkTests;
 			productName = RestKitFrameworkTests;
-			productReference = 25160E78145651060060A5C5 /* RestKitFrameworkTests.octest */;
+			productReference = 25160E78145651060060A5C5 /* ORestKitFrameworkTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		259C301515128079003066A2 /* RestKitResources */ = {
+		259C301515128079003066A2 /* ORestKitResources */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 259C301F15128079003066A2 /* Build configuration list for PBXNativeTarget "RestKitResources" */;
+			buildConfigurationList = 259C301F15128079003066A2 /* Build configuration list for PBXNativeTarget "ORestKitResources" */;
 			buildPhases = (
 				259C301215128079003066A2 /* Sources */,
 				259C301315128079003066A2 /* Frameworks */,
@@ -2491,9 +2491,9 @@
 			);
 			dependencies = (
 			);
-			name = RestKitResources;
+			name = ORestKitResources;
 			productName = RestKitResources;
-			productReference = 259C301615128079003066A2 /* RestKitResources.bundle */;
+			productReference = 259C301615128079003066A2 /* ORestKitResources.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -2505,7 +2505,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = RestKit;
 			};
-			buildConfigurationList = 25160D1014564E810060A5C5 /* Build configuration list for PBXProject "RestKit" */;
+			buildConfigurationList = 25160D1014564E810060A5C5 /* Build configuration list for PBXProject "ORestKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2517,11 +2517,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				25160D1514564E810060A5C5 /* RestKit */,
-				25160D2514564E820060A5C5 /* RestKitTests */,
-				25160E61145651060060A5C5 /* RestKitFramework */,
-				25160E77145651060060A5C5 /* RestKitFrameworkTests */,
-				259C301515128079003066A2 /* RestKitResources */,
+				25160D1514564E810060A5C5 /* ORestKit */,
+				25160D2514564E820060A5C5 /* ORestKitTests */,
+				25160E61145651060060A5C5 /* ORestKitFramework */,
+				25160E77145651060060A5C5 /* ORestKitFrameworkTests */,
+				259C301515128079003066A2 /* ORestKitResources */,
 			);
 		};
 /* End PBXProject section */
@@ -3099,12 +3099,12 @@
 /* Begin PBXTargetDependency section */
 		25160D2D14564E820060A5C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 25160D1514564E810060A5C5 /* RestKit */;
+			target = 25160D1514564E810060A5C5 /* ORestKit */;
 			targetProxy = 25160D2C14564E820060A5C5 /* PBXContainerItemProxy */;
 		};
 		25160E7C145651060060A5C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 25160E61145651060060A5C5 /* RestKitFramework */;
+			target = 25160E61145651060060A5C5 /* ORestKitFramework */;
 			targetProxy = 25160E7B145651060060A5C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -3167,14 +3167,14 @@
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD)";
 				"ARCHS[sdk=iphoneos6.0]" = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/Support/ORestKit-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OBJROOT = "$(SRCROOT)/Build";
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = ../../Headers/RestKit;
+				PRODUCT_NAME = ORestKit;
+				PUBLIC_HEADERS_FOLDER_PATH = ../../Headers/ORestKit;
 				SKIP_INSTALL = YES;
 				SYMROOT = "$(SRCROOT)/Build/Products";
 			};
@@ -3186,14 +3186,14 @@
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD)";
 				"ARCHS[sdk=iphoneos6.0]" = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/Support/ORestKit-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OBJROOT = "$(SRCROOT)/Build";
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = ../../Headers/RestKit;
+				PRODUCT_NAME = ORestKit;
+				PUBLIC_HEADERS_FOLDER_PATH = ../../Headers/ORestKit;
 				SKIP_INSTALL = YES;
 				SYMROOT = "$(SRCROOT)/Build/Products";
 			};
@@ -3204,13 +3204,13 @@
 			buildSettings = {
 				FRAMEWOORK_SEARCH_PATHS = "\"$(SDKROOT)/Developer/Library/Frameworks\" \"$(DEVELOPER_LIBRARY_DIR)/Frameworks\" \"$(SRCROOT)/Tests/Vendor\" \"$(SRCROOT)/Tests/Vendor/OCHamcrest\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/Support/ORestKit-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Tests/Vendor/OCMock\"";
-				INFOPLIST_FILE = "Resources/PLISTs/RestKitTests-Info.plist";
+				INFOPLIST_FILE = "Resources/PLISTs/ORestKitTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = "${CONFIGURATION_BUILD_DIR}";
 				OBJROOT = "$(SRCROOT)/Build";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ORestKitTests;
 				SYMROOT = "$(SRCROOT)/Build/Products";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -3221,13 +3221,13 @@
 			buildSettings = {
 				FRAMEWOORK_SEARCH_PATHS = "\"$(SDKROOT)/Developer/Library/Frameworks\" \"$(DEVELOPER_LIBRARY_DIR)/Frameworks\" \"$(SRCROOT)/Tests/Vendor\" \"$(SRCROOT)/Tests/Vendor/OCHamcrest\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/Support/ORestKit-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Tests/Vendor/OCMock\"";
-				INFOPLIST_FILE = "Resources/PLISTs/RestKitTests-Info.plist";
+				INFOPLIST_FILE = "Resources/PLISTs/ORestKitTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = "${CONFIGURATION_BUILD_DIR}";
 				OBJROOT = "$(SRCROOT)/Build";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ORestKitTests;
 				SYMROOT = "$(SRCROOT)/Build/Products";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -3243,14 +3243,14 @@
 				FRAMEWOORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/Support/ORestKit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
-				INFOPLIST_FILE = "Resources/PLISTs/RestKitFramework-Info.plist";
+				INFOPLIST_FILE = "Resources/PLISTs/ORestKitFramework-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = RestKit;
+				PRODUCT_NAME = ORestKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -3268,13 +3268,13 @@
 				FRAMEWOORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/Support/ORestKit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
-				INFOPLIST_FILE = "Resources/PLISTs/RestKitFramework-Info.plist";
+				INFOPLIST_FILE = "Resources/PLISTs/ORestKitFramework-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = RestKit;
+				PRODUCT_NAME = ORestKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -3288,17 +3288,17 @@
 				FRAMEWOORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\" \"$(SRCROOT)/Tests/Vendor\" \"$(SRCROOT)/Tests/Vendor/OCHamcrest\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/Support/ORestKit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Tests/Vendor/OCMock\"";
-				INFOPLIST_FILE = "Resources/PLISTs/RestKitFrameworkTests-Info.plist";
+				INFOPLIST_FILE = "Resources/PLISTs/ORestKitFrameworkTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Tests/Vendor/OCMock\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ORestKitFrameworkTests;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -3312,16 +3312,16 @@
 				FRAMEWOORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\" \"$(SRCROOT)/Tests/Vendor\" \"$(SRCROOT)/Tests/Vendor/OCHamcrest\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/Support/ORestKit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Tests/Vendor/OCMock\"";
-				INFOPLIST_FILE = "Resources/PLISTs/RestKitFrameworkTests-Info.plist";
+				INFOPLIST_FILE = "Resources/PLISTs/ORestKitFrameworkTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Tests/Vendor/OCMock\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ORestKitFrameworkTests;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -3333,14 +3333,14 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Resources/RestKitResources-Prefix.pch";
+				GCC_PREFIX_HEADER = "Resources/ORestKitResources-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "Resources/PLISTs/RestKitResources-Info.plist";
+				INFOPLIST_FILE = "Resources/PLISTs/ORestKitResources-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ORestKitResources;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -3353,13 +3353,13 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Resources/RestKitResources-Prefix.pch";
+				GCC_PREFIX_HEADER = "Resources/ORestKitResources-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "Resources/PLISTs/RestKitResources-Info.plist";
+				INFOPLIST_FILE = "Resources/PLISTs/ORestKitResources-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ORestKitResources;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -3368,7 +3368,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		25160D1014564E810060A5C5 /* Build configuration list for PBXProject "RestKit" */ = {
+		25160D1014564E810060A5C5 /* Build configuration list for PBXProject "ORestKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25160D3814564E820060A5C5 /* Debug */,
@@ -3377,7 +3377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25160D3A14564E820060A5C5 /* Build configuration list for PBXNativeTarget "RestKit" */ = {
+		25160D3A14564E820060A5C5 /* Build configuration list for PBXNativeTarget "ORestKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25160D3B14564E820060A5C5 /* Debug */,
@@ -3386,7 +3386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25160D3D14564E820060A5C5 /* Build configuration list for PBXNativeTarget "RestKitTests" */ = {
+		25160D3D14564E820060A5C5 /* Build configuration list for PBXNativeTarget "ORestKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25160D3E14564E820060A5C5 /* Debug */,
@@ -3395,7 +3395,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25160E87145651060060A5C5 /* Build configuration list for PBXNativeTarget "RestKitFramework" */ = {
+		25160E87145651060060A5C5 /* Build configuration list for PBXNativeTarget "ORestKitFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25160E88145651060060A5C5 /* Debug */,
@@ -3404,7 +3404,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25160E8A145651060060A5C5 /* Build configuration list for PBXNativeTarget "RestKitFrameworkTests" */ = {
+		25160E8A145651060060A5C5 /* Build configuration list for PBXNativeTarget "ORestKitFrameworkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25160E8B145651060060A5C5 /* Debug */,
@@ -3413,7 +3413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		259C301F15128079003066A2 /* Build configuration list for PBXNativeTarget "RestKitResources" */ = {
+		259C301F15128079003066A2 /* Build configuration list for PBXNativeTarget "ORestKitResources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				259C302015128079003066A2 /* Debug */,

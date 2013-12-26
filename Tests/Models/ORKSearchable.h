@@ -20,7 +20,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import <RestKit/ORKSearchableManagedObject.h>
+#import <ORestKit/ORKSearchableManagedObject.h>
 
 @interface ORKSearchable : ORKSearchableManagedObject
 

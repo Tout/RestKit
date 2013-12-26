@@ -25,9 +25,9 @@
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
 #import <SenTestingKit/SenTestingKit.h>
 
-#import <RestKit/RestKit.h>
-#import <RestKit/Testing.h>
-#import <RestKit/ORKManagedObjectStore.h>
+#import <ORestKit/RestKit.h>
+#import <ORestKit/Testing.h>
+#import <ORestKit/ORKManagedObjectStore.h>
 
 ORKOAuthClient *ORKTestNewOAuthClient(ORKTestResponseLoader *loader);
 
