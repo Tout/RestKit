@@ -25,7 +25,7 @@
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
 #import <SenTestingKit/SenTestingKit.h>
 
-#import <ORestKit/RestKit.h>
+#import <ORestKit/ORestKit.h>
 #import <ORestKit/Testing.h>
 #import <ORestKit/ORKManagedObjectStore.h>
 
