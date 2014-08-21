@@ -133,7 +133,7 @@
  The base URL includes everything up to the resource path, typically the portion
  that is repeated in every API call.
  */
-@property (nonatomic, copy, readonly) NSURL *baseURL;
+@property (copy, readonly) NSURL *baseURL;
 
 /**
  Returns the resource path of the receiver.
